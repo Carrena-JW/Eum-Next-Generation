@@ -10,6 +10,9 @@ namespace Eum.Api.Swagger
             var paths = new OpenApiPaths();
             foreach (var path in swaggerDoc.Paths)
             {
+                //var replacedPath = path.Key.Replace("v{version}", swaggerDoc.Info.Version);
+
+                //if(replacedPath)
                 paths.Add(path.Key.Replace("v{version}", swaggerDoc.Info.Version), path.Value);
             }
             swaggerDoc.Paths = paths;

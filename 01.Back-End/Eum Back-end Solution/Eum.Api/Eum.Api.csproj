@@ -8,11 +8,17 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eum.Module\Board\v1.0\Eum.Module.Board\Eum.Module.Board.csproj" />
     <ProjectReference Include="..\Eum.Shared\Eum.Shared.Infrastructure\Eum.Shared.Infrastructure.csproj" />
+    <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
+  </ItemGroup>
 </Project>

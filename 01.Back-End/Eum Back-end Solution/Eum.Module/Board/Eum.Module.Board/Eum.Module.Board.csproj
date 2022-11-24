@@ -12,12 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj" />
-    <ProjectReference Include="..\Eum.ModuleBoard.Infrastructure\Eum.ModuleBoard.Infrastructure.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Folder Include="Controllers\v2.0\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj" />
+    <ProjectReference Include="..\Eum.ModuleBoard.Infrastructure\Eum.ModuleBoard.Infrastructure.csproj" />
+  </ItemGroup>
 </Project>
