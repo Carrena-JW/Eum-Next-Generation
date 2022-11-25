@@ -2,67 +2,46 @@ using Eum.Api.Swagger;
 using Eum.Shared.Infrastructure.Extentions;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Options;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 var builder = WebApplication.CreateBuilder(args);
-
-
-
 
 #region [Builder Service Containers]
 builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddApiVersioning(options =>
 {
     options.DefaultApiVersion = new ApiVersion(1, 0);
     options.ReportApiVersions = true;
     options.AssumeDefaultVersionWhenUnspecified = true;
 });
-builder.Services.AddSwaggerGen(c =>
+builder.Services.AddVersionedApiExplorer(setup =>
 {
-    c.ResolveConflictingActions(descriptions =>
-    {
-        return descriptions.First();
-    });
-
-    c.SwaggerDoc(
-           "v1.0",
-           new OpenApiInfo
-           {
-               Title = "Eum API",
-               Version = "v1.0"
-           });
-    c.SwaggerDoc(
-        "v2.0",
-        new OpenApiInfo
-        {
-            Title = "Eum API",
-            Version = "v2.0"
-        });
-    c.OperationFilter<RemoveVersionParamterFilter>();
-    c.DocumentFilter<ReplaceVersionFilter>();
-}
-    );
+    setup.GroupNameFormat = "'v'VVV";
+    setup.SubstituteApiVersionInUrl = true;
+});
+builder.Services.AddSwaggerGen();
+builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 
 #endregion
 
 var app = builder.Build();
+var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1.0/swagger.json", "Eum API v1.0");
-        c.SwaggerEndpoint("/swagger/v2.0/swagger.json", "Eum API v2.0");
+        foreach (var description in provider.ApiVersionDescriptions)
+        {
+            c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"Eum Api {description.GroupName}");
+        }
     });
 }
-else
-{
-    app.UseExceptionHandler("/Error");
-}
+
 app.UseStaticFiles();
-app.UseAuthorization();
-app.MapControllers();
+app.UseRouting();
+app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
 app.Run();
