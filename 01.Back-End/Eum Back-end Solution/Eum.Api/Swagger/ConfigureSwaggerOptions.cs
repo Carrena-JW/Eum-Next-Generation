@@ -31,6 +31,13 @@ namespace Eum.Api.Swagger
         public void Configure(string name, SwaggerGenOptions options)
         {
             Configure(options);
+
+            //Remove version parameter
+            options.OperationFilter<RemoveVersionParamterFilter>();
+
+            //if controller not set version, will occur error
+            //because trigger one more actions, force select one
+            options.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
         }
 
         private OpenApiInfo CreateVersionInfo(
@@ -48,6 +55,27 @@ namespace Eum.Api.Swagger
             }
 
             return info;
+        }
+    }
+
+    public class RemoveVersionParamterFilter : IOperationFilter
+    {
+
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
+        {
+            var hasVersionProperty = false;
+
+            hasVersionProperty = operation.Parameters.Any(p => p.Name.Equals("api-version"));
+
+            if (hasVersionProperty)
+            {
+                var versionParameter = operation.Parameters.Single(p => p.Name == "api-version");
+                operation.Parameters.Remove(versionParameter);
+
+            }
+             
+
+             
         }
     }
 }
