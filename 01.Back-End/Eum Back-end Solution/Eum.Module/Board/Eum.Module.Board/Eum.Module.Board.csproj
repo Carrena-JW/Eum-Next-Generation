@@ -7,6 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="MediatR" Version="11.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Core" Version="2.2.5" />
     <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
   </ItemGroup>
@@ -17,6 +19,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj" />
-    <ProjectReference Include="..\Eum.ModuleBoard.Infrastructure\Eum.ModuleBoard.Infrastructure.csproj" />
+    <ProjectReference Include="..\Eum.ModuleBoard.Infrastructure\Eum.Module.Board.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

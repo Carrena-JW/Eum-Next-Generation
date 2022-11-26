@@ -33,7 +33,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board", "Eum.Mod
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board.Core", "Eum.Module\Board\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj", "{F2D5D5C8-ACA1-4FD8-9DD9-6E38BB96A465}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.ModuleBoard.Infrastructure", "Eum.Module\Board\Eum.ModuleBoard.Infrastructure\Eum.ModuleBoard.Infrastructure.csproj", "{05EC1E51-C92C-4D36-828F-0AC0B3EA50D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board.Infrastructure", "Eum.Module\Board\Eum.ModuleBoard.Infrastructure\Eum.Module.Board.Infrastructure.csproj", "{05EC1E51-C92C-4D36-828F-0AC0B3EA50D3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
