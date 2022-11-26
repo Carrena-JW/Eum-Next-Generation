@@ -14,6 +14,7 @@ namespace Eum.Module.Board.Controllers.v1._0
         [MapToApiVersion("1.0")]
         public async Task<IActionResult> Get()
         {
+           //  throw new Exception();
             return Ok("this is version v1.0");
         }
 

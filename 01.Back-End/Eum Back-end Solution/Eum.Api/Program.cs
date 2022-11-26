@@ -12,7 +12,7 @@ builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddApiVersioning(options =>
 {
-    options.DefaultApiVersion = new ApiVersion(1, 0);
+    options.DefaultApiVersion = new ApiVersion(0, 0);
     options.ReportApiVersions = true;
     options.AssumeDefaultVersionWhenUnspecified = true;
 });
