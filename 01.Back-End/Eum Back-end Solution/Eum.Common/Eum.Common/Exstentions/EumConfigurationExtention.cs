@@ -21,8 +21,10 @@ namespace Eum.Shared.Infrastructure.Extentions
         //    }
         public static IServiceCollection AddEumService(this IServiceCollection services)
         {
-
+           var domainassem =  AppDomain.CurrentDomain.GetAssemblies();
             var eumAssemblies = Assembly.GetExecutingAssembly();
+            var callingAssemblies = Assembly.GetCallingAssembly();
+            var adf = Assembly.GetEntryAssembly();
 
             return services.AddAutoMapper(Assembly.GetExecutingAssembly())
                 .AddMediatR(Assembly.GetExecutingAssembly());
