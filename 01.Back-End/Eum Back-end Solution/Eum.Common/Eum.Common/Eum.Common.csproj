@@ -10,10 +10,12 @@
     <None Remove="Helpers\" />
     <None Remove="Exstentions\" />
     <None Remove="Bases\" />
+    <None Remove="Interfaces\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Helpers\" />
     <Folder Include="Exstentions\" />
     <Folder Include="Bases\" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 </Project>

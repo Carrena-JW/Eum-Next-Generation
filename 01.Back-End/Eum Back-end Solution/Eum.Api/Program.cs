@@ -5,6 +5,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using MediatR;
+using Eum.Module.Board.Queries;
+using Microsoft.AspNetCore.Hosting;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,7 +27,9 @@ builder.Services.AddVersionedApiExplorer(setup =>
 });
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
-//builder.Services.AddMediatR(typeof(Program));
+builder.Services.AddMediatR(AppDomain.CurrentDomain.GetEumModuleAssemblies());
+
+
 #endregion
 
 var app = builder.Build();

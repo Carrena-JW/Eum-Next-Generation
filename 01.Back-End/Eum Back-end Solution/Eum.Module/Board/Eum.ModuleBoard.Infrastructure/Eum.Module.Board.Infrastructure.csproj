@@ -6,4 +6,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj" />
+    <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Common.csproj" />
+  </ItemGroup>
 </Project>

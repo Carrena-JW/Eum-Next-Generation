@@ -1,13 +1,8 @@
-﻿using Eum.Module.Board.Commands;
+﻿using Eum.Module.Board.Core.Handlers.Commands;
+using Eum.Module.Board.Core.Handlers.Queries;
 using Eum.Module.Board.Infrastructure;
-using Eum.Module.Board.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Eum.Module.Board.Controllers.v1._0
 {
@@ -34,7 +29,7 @@ namespace Eum.Module.Board.Controllers.v1._0
         [HttpPost]
         public async Task<IActionResult> CreateArticle([FromBody] Article request)
         {
-            var result = await _mediator.Send(new CreateArticleCommand() { NewArticle = request });
+            var result = await _mediator.Send(new CreateArticleCommand<Article>() { NewArticle = request });
             return Ok(result);
         }
 
