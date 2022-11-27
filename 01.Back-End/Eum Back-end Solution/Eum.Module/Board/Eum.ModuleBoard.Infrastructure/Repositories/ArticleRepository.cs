@@ -16,19 +16,19 @@ namespace Eum.Module.Board.Infrastructure.Repositoires
         };
         
 
-        public async Task<ArticleEntity> Create(ArticleEntity input)
+        public async Task<int> Create(ArticleEntity input)
         { 
             _list.Add(input);
-            return input;
+            return input.Id;
             
         }
 
-        public async Task<ArticleEntity> Delete(int id)
+        public async Task Delete(int id)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<ArticleEntity> Update(int id)
+        public async Task Update(ArticleEntity input)
         {
             throw new NotImplementedException();
         }

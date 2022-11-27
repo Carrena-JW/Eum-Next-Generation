@@ -11,12 +11,14 @@
     <None Remove="Interface\Repositoires\" />
     <None Remove="Interface\Entities\" />
     <None Remove="Entities\" />
+    <None Remove="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
     <Folder Include="Interface\Repositoires\" />
     <Folder Include="Interface\Entities\" />
     <Folder Include="Entities\" />
+    <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Common.csproj" />

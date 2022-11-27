@@ -7,6 +7,8 @@ using System.Text;
 using System.Threading.Tasks;
 using MediatR;
 using Eum.Shared.Infrastructure.Controllers;
+using System.Reflection;
+
 
 namespace Eum.Shared.Infrastructure.Extentions
 {
@@ -17,5 +19,21 @@ namespace Eum.Shared.Infrastructure.Extentions
         //        services.AddMediatR(typeof());
         //        return services;
         //    }
+        public static IServiceCollection AddEumService(this IServiceCollection services)
+        {
+
+            var eumAssemblies = Assembly.GetExecutingAssembly();
+
+            return services.AddAutoMapper(Assembly.GetExecutingAssembly())
+                .AddMediatR(Assembly.GetExecutingAssembly());
+        }
     }
 }
+
+
+//public static IServiceCollection AddCore(this IServiceCollection services)
+//{
+//    return services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly())
+//        .AddAutoMapper(Assembly.GetExecutingAssembly())
+//        .AddMediatR(Assembly.GetExecutingAssembly());
+//}

@@ -6,12 +6,12 @@ using MediatR;
 
 namespace Eum.Module.Board.Core.Handlers.Commands
 {
-    public record CreateArticleCommand: IRequest<ArticleEntity> 
+    public record CreateArticleCommand: IRequest<int> 
     {
         public ArticleEntity NewValue { get; set; }
     }
 
-    public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand, ArticleEntity>
+    public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand, int>
     {
         //private readonly TestDatabase _repository;
         private readonly IArticleRepository<ArticleEntity> _repository;
@@ -21,11 +21,11 @@ namespace Eum.Module.Board.Core.Handlers.Commands
             _repository = repository;
             
         }
-        public async Task<ArticleEntity> Handle(CreateArticleCommand request, CancellationToken cancellationToken)
+        public async Task<int> Handle(CreateArticleCommand request, CancellationToken cancellationToken)
         {
             var input = request.NewValue;
-            await _repository.Create(input);
-            return input;
+            var createdId = await _repository.Create(input);
+            return createdId;
         }
 
         

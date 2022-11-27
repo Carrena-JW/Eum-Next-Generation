@@ -22,9 +22,8 @@ namespace Eum.Module.Board.Controllers.v1._0
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
-        {
-            var result= await _mediator.Send(new GetArticlesQuery());
-            return Ok(result);
+        { 
+            return Ok(await _mediator.Send(new GetArticlesQuery()));
         }
 
         [HttpPost]

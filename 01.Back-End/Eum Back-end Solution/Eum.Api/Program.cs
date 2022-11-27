@@ -1,13 +1,8 @@
 using Eum.Api.Swagger;
 using Eum.Shared.Infrastructure.Extentions;
-using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using MediatR;
-using Eum.Module.Board.Queries;
-using Microsoft.AspNetCore.Hosting;
-using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +23,7 @@ builder.Services.AddVersionedApiExplorer(setup =>
 builder.Services.AddSwaggerGen();
 builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetEumModuleAssemblies());
-
+builder.Services.AddEumService();
 
 #endregion
 
