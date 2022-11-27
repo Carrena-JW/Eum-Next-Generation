@@ -25,6 +25,8 @@ builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
 builder.Services.AddMediatR(AppDomain.CurrentDomain.GetEumModuleAssemblies());
 builder.Services.AddEumService();
 
+
+
 #endregion
 
 var app = builder.Build();

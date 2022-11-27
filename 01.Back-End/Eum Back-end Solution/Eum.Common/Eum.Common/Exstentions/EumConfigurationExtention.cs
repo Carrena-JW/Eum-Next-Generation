@@ -6,11 +6,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using MediatR;
-using Eum.Shared.Infrastructure.Controllers;
+using Eum.Common.Controllers;
 using System.Reflection;
 
 
-namespace Eum.Shared.Infrastructure.Extentions
+namespace Eum.Common.Extentions
 {
     public static class EumConfigurationExtention
     {

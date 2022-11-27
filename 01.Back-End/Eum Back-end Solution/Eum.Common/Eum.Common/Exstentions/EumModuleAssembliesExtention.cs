@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Eum.Shared.Infrastructure.Extentions
+namespace Eum.Common.Extentions
 {
 	public static class EumModuleAssembliesExtention
 	{

@@ -1,4 +1,4 @@
-﻿using Eum.Shared.Infrastructure.Controllers;
+﻿using Eum.Common.Controllers;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eum.Shared.Infrastructure.Extentions
+namespace Eum.Common.Extentions
 {
     public static class ControllerExtentions
     {

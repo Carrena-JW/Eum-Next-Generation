@@ -13,11 +13,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Eum.Shared\Eum.Shared.Infrastructure\Eum.Shared.Infrastructure.csproj" />
     <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Eum.Common\Eum.Common\Eum.Common.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
