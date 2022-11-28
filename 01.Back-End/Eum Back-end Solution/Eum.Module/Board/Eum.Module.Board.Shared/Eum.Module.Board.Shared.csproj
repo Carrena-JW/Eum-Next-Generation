@@ -12,6 +12,8 @@
     <None Remove="Interface\Entities\" />
     <None Remove="Entities\" />
     <None Remove="DTO\" />
+    <None Remove="DTO\Response\" />
+    <None Remove="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\" />
@@ -19,6 +21,8 @@
     <Folder Include="Interface\Entities\" />
     <Folder Include="Entities\" />
     <Folder Include="DTO\" />
+    <Folder Include="DTO\Response\" />
+    <Folder Include="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Shared.Common.csproj" />

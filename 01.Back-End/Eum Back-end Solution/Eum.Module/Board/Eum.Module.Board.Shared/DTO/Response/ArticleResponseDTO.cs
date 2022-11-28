@@ -1,7 +1,7 @@
 ﻿using System;
 namespace Eum.Module.Board.Shared.Response.DTO
 {
-	public record ResponseArticleDTO
+	public record ArticleReponseDTO
 	{
 		public int Id { get; set; }
 		public string Subject { get; set; } = string.Empty;

@@ -22,7 +22,4 @@
     <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Swagger\" />
-  </ItemGroup>
 </Project>
