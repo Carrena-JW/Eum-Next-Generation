@@ -1,5 +1,5 @@
 ﻿using System;
-using Eum.Common.Interfaces;
+using Eum.Shared.Common.Interfaces;
 
 namespace Eum.Module.Board.Shared.Interfaces
 {

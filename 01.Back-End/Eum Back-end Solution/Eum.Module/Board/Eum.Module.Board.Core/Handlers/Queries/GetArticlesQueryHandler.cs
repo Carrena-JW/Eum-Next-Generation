@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Eum.Common.Interfaces;
 using Eum.Module.Board.Shared.DTO;
 using Eum.Module.Board.Shared.Entities;
 using Eum.Module.Board.Shared.Interface.Repositoires;
@@ -13,7 +12,6 @@ namespace Eum.Module.Board.Core.Handlers.Queries
 
     public class GetArticlesQueryHandler : IRequestHandler<GetArticlesQuery, List<ArticleDTO>>
     {
-        //private readonly TestDatabase _repository;
         private readonly IMapper _mapper;
         private readonly IArticleRepository<ArticleEntity> _repository;
 

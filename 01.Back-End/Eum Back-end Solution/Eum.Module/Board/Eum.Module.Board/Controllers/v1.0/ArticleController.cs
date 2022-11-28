@@ -1,6 +1,5 @@
 ﻿using Eum.Module.Board.Core.Handlers.Commands;
 using Eum.Module.Board.Core.Handlers.Queries;
-using Eum.Module.Board.Infrastructure;
 using Eum.Module.Board.Shared.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -22,7 +21,7 @@ namespace Eum.Module.Board.Controllers.v1._0
 
         [HttpGet]
         public async Task<IActionResult> GetAll()
-        { 
+        {
             return Ok(await _mediator.Send(new GetArticlesQuery()));
         }
 

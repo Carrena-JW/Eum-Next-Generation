@@ -1,7 +1,6 @@
-using Eum.Api.Swagger;
-using Eum.Shared.Infrastructure.Extentions;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+using Eum.Shared.Common.Extentions;
+using Eum.Shared.Common.Helpers.MVC;
+using Eum.Shared.Common.Swagger;
 using Microsoft.AspNetCore.Mvc.ApiExplorer;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,39 +8,19 @@ var builder = WebApplication.CreateBuilder(args);
 #region [Builder Service Containers]
 builder.Services.AddSharedInfrastructure(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddApiVersioning(options =>
-{
-    options.DefaultApiVersion = new ApiVersion(0, 0);
-    options.ReportApiVersions = true;
-    options.AssumeDefaultVersionWhenUnspecified = true;
-});
-builder.Services.AddVersionedApiExplorer(setup =>
-{
-    setup.GroupNameFormat = "'v'VVV";
-    setup.SubstituteApiVersionInUrl = true;
-});
-builder.Services.AddSwaggerGen();
-builder.Services.ConfigureOptions<ConfigureSwaggerOptions>();
-builder.Services.AddMediatR(AppDomain.CurrentDomain.GetEumModuleAssemblies());
-builder.Services.AddEumService();
-
-
-
+builder.Services.AddApiVersioning(EumMVCHelper.ConfigureApiVersoning);
+builder.Services.AddVersionedApiExplorer(EumMVCHelper.ConfigureApiExplorer);
+builder.Services.AddSwaggerGen(EumSwaggerHelper.ConfigureSwaggerGen);
+builder.EumDIContainerBuilder();
 #endregion
 
 var app = builder.Build();
-var provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+EumSwaggerHelper.provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(c =>
-    {
-        foreach (var description in provider.ApiVersionDescriptions)
-        {
-            c.SwaggerEndpoint($"/swagger/{description.GroupName}/swagger.json", $"Eum Api {description.GroupName}");
-        }
-    });
+    app.UseSwagger(EumSwaggerHelper.ConfigureSwagger);
+    app.UseSwaggerUI(EumSwaggerHelper.ConfigureSwaggerUI);
 }
 
 app.UseStaticFiles();

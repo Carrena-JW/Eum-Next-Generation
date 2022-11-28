@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33110.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Api", "Eum.Api\Eum.Api.csproj", "{021FABC1-C5D0-4252-B2A7-AA03D5B1BB7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Api", "Eum.Api\Eum.Api.csproj", "{021FABC1-C5D0-4252-B2A7-AA03D5B1BB7C}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Eum.Common", "01. Eum.Common", "{492E575B-3387-46E4-9271-36CA35AE9177}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01. Eum.Shared.Common", "01. Eum.Shared.Common", "{492E575B-3387-46E4-9271-36CA35AE9177}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02. Eum.Infrastructure", "02. Eum.Infrastructure", "{ED189655-B045-452D-8D99-1733F0395FF2}"
 EndProject
@@ -27,15 +27,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board.Infrastruc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feelanet", "Feelanet", "{5AF9B984-6166-4D4D-B931-650A284696A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Feelanet", "Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj", "{CA483652-0274-43D9-B229-AAF1675A3B6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Feelanet", "Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj", "{CA483652-0274-43D9-B229-AAF1675A3B6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Feelanet.Core", "Eum.Module\Feelanet\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj", "{FFC96904-08A3-4CF4-A225-941B80F1229F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Feelanet.Core", "Eum.Module\Feelanet\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj", "{FFC96904-08A3-4CF4-A225-941B80F1229F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Feelanet.Infrastructure", "Eum.Module\Feelanet\Eum.Module.Feelanet.Infrastructure\Eum.Module.Feelanet.Infrastructure.csproj", "{FAB5A407-D270-4CB5-A7E6-851F57D3E886}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Feelanet.Infrastructure", "Eum.Module\Feelanet\Eum.Module.Feelanet.Infrastructure\Eum.Module.Feelanet.Infrastructure.csproj", "{FAB5A407-D270-4CB5-A7E6-851F57D3E886}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Common", "Eum.Common\Eum.Common\Eum.Common.csproj", "{BA5045C2-903E-49E8-926E-26E97815C946}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Shared.Common", "Eum.Common\Eum.Common\Eum.Shared.Common.csproj", "{BA5045C2-903E-49E8-926E-26E97815C946}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Board.Shared", "Eum.Module\Board\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj", "{2AE1B46A-DFEE-4E17-AA6D-CC6CBCD71694}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board.Shared", "Eum.Module\Board\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj", "{2AE1B46A-DFEE-4E17-AA6D-CC6CBCD71694}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

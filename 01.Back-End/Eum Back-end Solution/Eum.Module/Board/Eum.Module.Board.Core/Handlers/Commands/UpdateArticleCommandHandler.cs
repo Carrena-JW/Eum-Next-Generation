@@ -1,11 +1,10 @@
-﻿using System;
-using Eum.Module.Board.Shared.Entities;
+﻿using Eum.Module.Board.Shared.Entities;
 using Eum.Module.Board.Shared.Interface.Repositoires;
 using MediatR;
 
 namespace Eum.Module.Board.Core.Handlers.Commands
 {
-	 
+
     public record UpdateArticleHandler : IRequest<ArticleEntity>
     {
         public ArticleEntity UpdateValue { get; set; }
@@ -27,9 +26,6 @@ namespace Eum.Module.Board.Core.Handlers.Commands
             await _repository.Update(input);
             return input;
         }
-
-
     }
-    
 }
 

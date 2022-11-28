@@ -21,6 +21,6 @@
     <Folder Include="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Common.csproj" />
+    <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Shared.Common.csproj" />
   </ItemGroup>
 </Project>

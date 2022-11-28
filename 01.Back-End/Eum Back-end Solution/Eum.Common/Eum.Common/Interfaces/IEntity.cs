@@ -1,5 +1,5 @@
 ﻿using System;
-namespace Eum.Common.Interfaces
+namespace Eum.Shared.Common.Interfaces
 {
 	public interface IEntity
 	{

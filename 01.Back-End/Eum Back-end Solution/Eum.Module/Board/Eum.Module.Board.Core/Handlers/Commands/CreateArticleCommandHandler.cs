@@ -1,4 +1,4 @@
-﻿using Eum.Common.Interfaces;
+﻿using Eum.Shared.Common.Interfaces;
 using Eum.Module.Board.Shared.Entities;
 using Eum.Module.Board.Shared.Interface.Repositoires;
 using Eum.Module.Board.Shared.Interfaces;

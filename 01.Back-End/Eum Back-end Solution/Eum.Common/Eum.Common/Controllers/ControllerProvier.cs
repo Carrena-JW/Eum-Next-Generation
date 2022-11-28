@@ -7,7 +7,7 @@ using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Eum.Common.Controllers
+namespace Eum.Shared.Common.Controllers
 {
     internal class ControllerProvier : ControllerFeatureProvider
     {

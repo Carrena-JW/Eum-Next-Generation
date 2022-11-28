@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Reflection;
 
-namespace Eum.Common.Extentions
+namespace Eum.Shared.Common.Extentions
 {
 	public static class EumModuleAssembliesExtention
 	{
@@ -9,7 +9,7 @@ namespace Eum.Common.Extentions
 		{
 			var assemblies = appDomain.GetAssemblies();
             
-            return assemblies.Where(a => a.FullName.StartsWith("Eum.Module")).ToArray();
+            return assemblies.Where(a =>  a.FullName.StartsWith("Eum.Module")).ToArray();
             
 		}
 	}

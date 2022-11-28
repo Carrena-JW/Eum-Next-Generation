@@ -7,24 +7,22 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
-    <ProjectReference Include="..\Eum.Common\Eum.Common\Eum.Common.csproj">
+    <ProjectReference Include="..\Eum.Common\Eum.Common\Eum.Shared.Common.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Swagger\" />
   </ItemGroup>
 </Project>
