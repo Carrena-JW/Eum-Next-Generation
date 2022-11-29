@@ -1,12 +1,25 @@
 ﻿namespace Eum.Shared.Common.Bases
 {
-	public abstract class EntityBase<T>
+	public abstract class EntityBase
 	{
-		public abstract T Create(T input);
-		public abstract T Delete(int id);
-		public abstract T Update(int id);
-		public abstract T Read(int id);
+        private int _Id;
+        public int Id
+        {
+            get
+            {
+                return _Id;
+            }
+            protected set
+            {
+                _Id = value;
+            }
+        }
 
-	}
+        public string CreatedId { get; set; }
+        public string UpdatedId { get; set; }
+        public DateTime CreatedDate { get; set; }  
+        public DateTime UpdatedDate { get; set; }  
+
+    }
 }
 

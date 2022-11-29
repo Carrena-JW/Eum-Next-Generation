@@ -2,6 +2,8 @@
 
 namespace Eum.Module.Board.Core.Handlers.Queries
 {
+    //복잡하게 이렇게 안함
+
     public record GetArticlesQuery : IRequest<List<ArticleReponseDTO>>
     {
     }
