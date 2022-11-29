@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -20,11 +20,15 @@
     <Folder Include="Interface\Repositoires\" />
     <Folder Include="Interface\Entities\" />
     <Folder Include="Entities\" />
-    <Folder Include="DTO\" />
-    <Folder Include="DTO\Response\" />
-    <Folder Include="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="GlobalUsings.cs">
+      <DependentUpon>GlobalUsings.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
 </Project>

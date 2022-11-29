@@ -29,4 +29,20 @@
     <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
+  <ItemGroup>
+    <None Update="GlobalUsings.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>GlobalUsings.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="GlobalUsings.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>GlobalUsings.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

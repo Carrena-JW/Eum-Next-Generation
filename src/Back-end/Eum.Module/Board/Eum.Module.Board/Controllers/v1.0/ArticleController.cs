@@ -1,9 +1,4 @@
-﻿using Eum.Module.Board.Core.Handlers.Commands;
-using Eum.Module.Board.Core.Handlers.Queries;
-using Eum.Module.Board.Shared.DTO.Request;
-using Eum.Module.Board.Shared.Entities;
-using MediatR;
-using Microsoft.AspNetCore.Mvc;
+﻿
 
 namespace Eum.Module.Board.Controllers.v1._0
 {

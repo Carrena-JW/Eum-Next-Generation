@@ -1,4 +1,4 @@
-﻿using System;
+﻿
 namespace Eum.Shared.Common.Interfaces
 {
 	public interface IRepository<T> : IDisposable

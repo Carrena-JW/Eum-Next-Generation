@@ -1,8 +1,4 @@
-﻿using Eum.Shared.Common.Interfaces;
-using Eum.Module.Board.Shared.Entities;
-using Eum.Module.Board.Shared.Interface.Repositoires;
-using Eum.Module.Board.Shared.Interfaces;
-using MediatR;
+﻿
 
 namespace Eum.Module.Board.Core.Handlers.Commands
 {

@@ -1,10 +1,4 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.OpenApi.Models;
-using Swashbuckle.AspNetCore.Swagger;
-using Swashbuckle.AspNetCore.SwaggerGen;
-using Swashbuckle.AspNetCore.SwaggerUI;
+﻿
 
 namespace Eum.Shared.Common.Swagger
 {

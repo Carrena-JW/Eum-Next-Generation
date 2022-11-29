@@ -1,13 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc.Controllers;
-using Microsoft.AspNetCore.Mvc;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Eum.Shared.Common.Controllers
+﻿namespace Eum.Shared.Common.Controllers
 {
     internal class ControllerProvier : ControllerFeatureProvider
     {

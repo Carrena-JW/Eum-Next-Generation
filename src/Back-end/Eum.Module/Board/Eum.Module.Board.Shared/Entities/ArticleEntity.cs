@@ -1,6 +1,4 @@
-﻿using System;
-using Eum.Module.Board.Shared.Interfaces;
-
+﻿
 namespace Eum.Module.Board.Shared.Entities
 {
 	public class ArticleEntity : IArticle

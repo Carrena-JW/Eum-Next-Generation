@@ -1,6 +1,4 @@
-﻿using Eum.Module.Board.Shared.Entities;
-using Eum.Module.Board.Shared.Interface.Repositoires;
-
+﻿
 namespace Eum.Module.Board.Infrastructure.Repositoires
 {
 

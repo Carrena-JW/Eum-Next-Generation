@@ -1,15 +1,4 @@
-﻿using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Eum.Shared.Common.Helpers.MVC;
-using Eum.Shared.Common.Helpers.SeriLog;
-using Eum.Shared.Common.Swagger;
-using MediatR;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Serilog;
-
+﻿
 namespace Eum.Shared.Common.Extentions
 {
     public static class EumWebApplicationExtention
@@ -17,8 +6,6 @@ namespace Eum.Shared.Common.Extentions
 
         public static WebApplicationBuilder EumWebApplicationBuilder(this WebApplicationBuilder builder)
         {
-            //Custom 하게 추가된 내용은 여기서 모두 정의함
-
             #region [Api Versioning]
             builder.Services.AddEndpointsApiExplorer()
                             .AddApiVersioning(EumMVCHelper.ConfigureApiVersoning)

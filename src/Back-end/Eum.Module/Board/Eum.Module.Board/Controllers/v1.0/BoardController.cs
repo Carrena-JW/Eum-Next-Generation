@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Mvc;
-
+﻿
 namespace Eum.Module.Board.Controllers.v1._0
 {
 

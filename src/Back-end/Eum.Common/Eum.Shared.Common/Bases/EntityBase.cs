@@ -1,5 +1,4 @@
-﻿using System;
-namespace Eum.Shared.Common.Bases
+﻿namespace Eum.Shared.Common.Bases
 {
 	public abstract class EntityBase<T>
 	{

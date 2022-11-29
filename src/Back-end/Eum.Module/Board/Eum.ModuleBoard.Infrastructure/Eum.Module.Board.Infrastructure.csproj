@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -14,5 +14,12 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="GlobalUsings.cs">
+      <DependentUpon>GlobalUsings.tt</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
   </ItemGroup>
 </Project>
