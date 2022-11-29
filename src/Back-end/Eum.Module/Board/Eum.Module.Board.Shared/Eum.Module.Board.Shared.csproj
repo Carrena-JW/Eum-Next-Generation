@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>false</Nullable>
+    <Nullable>disable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
@@ -25,6 +25,6 @@
     <Folder Include="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Eum.Common\Eum.Common\Eum.Shared.Common.csproj" />
+    <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
   </ItemGroup>
 </Project>

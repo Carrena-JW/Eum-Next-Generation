@@ -2,18 +2,16 @@
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
-    <Nullable>false</Nullable>
+    <Nullable>disable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
     <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
     <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj">
-      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
-    </ProjectReference>
-    <ProjectReference Include="..\Eum.Common\Eum.Common\Eum.Shared.Common.csproj">
       <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
     </ProjectReference>
   </ItemGroup>
