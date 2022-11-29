@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>false</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Repositories\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj" />
+  </ItemGroup>
+</Project>
