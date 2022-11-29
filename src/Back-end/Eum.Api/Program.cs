@@ -1,29 +1,30 @@
 using Eum.Shared.Common.Extentions;
-using Eum.Shared.Common.Helpers.MVC;
-using Eum.Shared.Common.Swagger;
-using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Serilog;
 
-var builder = WebApplication.CreateBuilder(args);
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateBootstrapLogger(); 
 
-#region [Builder Service Containers]
-builder.Services.AddSharedInfrastructure(builder.Configuration);
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddApiVersioning(EumMVCHelper.ConfigureApiVersoning);
-builder.Services.AddVersionedApiExplorer(EumMVCHelper.ConfigureApiExplorer);
-builder.Services.AddSwaggerGen(EumSwaggerHelper.ConfigureSwaggerGen);
-builder.EumDIContainerBuilder();
-#endregion
+Log.Information("Starting up");
 
-var app = builder.Build();
-EumSwaggerHelper.provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
-
-if (app.Environment.IsDevelopment())
+try
 {
-    app.UseSwagger(EumSwaggerHelper.ConfigureSwagger);
-    app.UseSwaggerUI(EumSwaggerHelper.ConfigureSwaggerUI);
+
+    WebApplication.CreateBuilder(args)
+        .EumWebApplicationBuilder()
+        .Build()
+        .EumWebApplication()
+        .Run();
+
+}
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Unhandled exception");
+}
+finally
+{
+    Log.Information("Shut down complete");
+    Log.CloseAndFlush();
 }
 
-app.UseStaticFiles();
-app.UseRouting();
-app.UseEndpoints(endpoints => { endpoints.MapControllers(); });
-app.Run();
+

@@ -20,4 +20,8 @@
     <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+  </ItemGroup>
+
 </Project>
