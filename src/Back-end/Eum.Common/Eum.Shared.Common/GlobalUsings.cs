@@ -19,3 +19,5 @@ global using Swashbuckle.AspNetCore.Swagger;
 global using Swashbuckle.AspNetCore.SwaggerGen;
 global using Swashbuckle.AspNetCore.SwaggerUI;
 global using System.Reflection;
+global using System;
+global using Microsoft.Extensions.Configuration;

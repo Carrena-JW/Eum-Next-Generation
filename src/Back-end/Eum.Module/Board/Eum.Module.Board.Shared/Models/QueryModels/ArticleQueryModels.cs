@@ -1,22 +1,22 @@
 ﻿
 namespace Eum.Module.Board.Shared.Models.QueryModels;
 
-public record Article  
+public record ArticleQueryModel
 {
     public string Subject { get; init; }
-    public List<Comment> Comments { get; set; }
-    public List<Recommand> Recommands { get; set; }
+    public List<CommentQueryModel> Comments { get; set; }
+    public List<RecommandQueryModel> Recommands { get; set; }
     public string CreatedUserName { get; init; }
     public string CreatedUserTitle { get; init; }
     public string CreatedUserDeptName { get; init; }
 }
 
-public record Comment
+public record CommentQueryModel
 {
      
 }
 
-public record Recommand
+public record RecommandQueryModel
 {
 
 }

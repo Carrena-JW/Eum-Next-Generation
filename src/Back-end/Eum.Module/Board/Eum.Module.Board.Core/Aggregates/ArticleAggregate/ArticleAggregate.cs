@@ -11,6 +11,7 @@ public class ArticleAggregate : EntityBase, IAggregateRoot
     {
 
     }
+
     public ArticleAggregate(string contents, string subject) : this()
     {
 
