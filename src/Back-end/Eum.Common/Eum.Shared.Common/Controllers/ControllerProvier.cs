@@ -1,27 +1,26 @@
-﻿namespace Eum.Shared.Common.Controllers
+﻿namespace Eum.Shared.Common.Controllers;
+
+internal class ControllerProvier : ControllerFeatureProvider
 {
-    internal class ControllerProvier : ControllerFeatureProvider
+    protected override bool IsController(TypeInfo typeInfo)
     {
-        protected override bool IsController(TypeInfo typeInfo)
+        if (!typeInfo.IsClass)
         {
-            if (!typeInfo.IsClass)
-            {
-                return false;
-            }
-            if (typeInfo.IsAbstract)
-            {
-                return false;
-            }
-            if (typeInfo.ContainsGenericParameters)
-            {
-                return false;
-            }
-            if (typeInfo.IsDefined(typeof(NonControllerAttribute)))
-            {
-                return false;
-            }
-            return typeInfo.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase) ||
-                    typeInfo.IsDefined(typeof(ControllerAttribute));
+            return false;
         }
+        if (typeInfo.IsAbstract)
+        {
+            return false;
+        }
+        if (typeInfo.ContainsGenericParameters)
+        {
+            return false;
+        }
+        if (typeInfo.IsDefined(typeof(NonControllerAttribute)))
+        {
+            return false;
+        }
+        return typeInfo.Name.EndsWith("Controller", StringComparison.OrdinalIgnoreCase) ||
+                typeInfo.IsDefined(typeof(ControllerAttribute));
     }
 }

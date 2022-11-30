@@ -13,6 +13,7 @@
     <Folder Include="Repositories\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj" />
     <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj" />
   </ItemGroup>
   <ItemGroup>

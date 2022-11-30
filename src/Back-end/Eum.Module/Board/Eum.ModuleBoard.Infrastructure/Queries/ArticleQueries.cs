@@ -1,12 +1,4 @@
-﻿using Eum.Module.Board.Shared.Interface.Queries;
-using Eum.Module.Board.Shared.Models.QueryModels;
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
 
 namespace Eum.Module.Board.Infrastructure.Queries
 {

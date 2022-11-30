@@ -1,3 +1,7 @@
+using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Eum.Module.Board;
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger(); 
@@ -9,6 +13,11 @@ try
 
     WebApplication.CreateBuilder(args)
         .EumWebApplicationBuilder()
+        .AddEumModule(container =>
+        {
+           
+            container.RegisterModule(new EumBoardModule());
+        })
         .Build()
         .EumWebApplication()
         .Run();

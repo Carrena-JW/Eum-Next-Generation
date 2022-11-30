@@ -25,7 +25,6 @@
   <ItemGroup>
     <Folder Include="Handlers\" />
     <Folder Include="Handlers\Commands\" />
-    <Folder Include="Handlers\Queries\" />
     <Folder Include="Mapper\" />
   </ItemGroup>
   <ItemGroup>

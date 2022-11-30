@@ -1,8 +1,7 @@
 ﻿
-namespace Eum.Shared.Common.Interfaces
+namespace Eum.Shared.Common.Interfaces;
+
+public interface IEumModule
 {
-    public interface IEumModule
-    {
-        void InitiailzeModule(IServiceCollection services);
-    }
+    void InitiailzeModule(IServiceCollection services);
 }

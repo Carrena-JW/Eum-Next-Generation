@@ -1,12 +1,12 @@
 ﻿
+using Eum.Shared.Common.Bases;
+
 namespace Eum.Module.Board.Controllers.v1._0
 {
 
     [ApiVersion("1.0")]
     [ApiVersion("2.0")]
-    [ApiController]
-    [Route("/api/v{version:apiVersion}/[controller]")]
-    internal class BoardController : ControllerBase
+    internal class BoardController : EumControllerBase
     {
 
         [HttpGet]

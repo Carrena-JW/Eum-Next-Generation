@@ -1,14 +1,13 @@
 ﻿
 
-namespace Eum.Shared.Common.Helpers.SeriLog
+namespace Eum.Shared.Common.Helpers.SeriLog;
+
+public class EumSeriLogHelper
 {
-    public class EumSeriLogHelper
+    public static void ConfigureEumLogger(HostBuilderContext context, LoggerConfiguration config)
     {
-        public static void ConfigureEumLogger(HostBuilderContext context, LoggerConfiguration config)
-        {
-            //appsetting ? or hard-coding
-            config.WriteTo.Console().ReadFrom.Configuration(context.Configuration);
-        
-        }
+        //appsetting ? or hard-coding
+        config.WriteTo.Console().ReadFrom.Configuration(context.Configuration);
+    
     }
 }

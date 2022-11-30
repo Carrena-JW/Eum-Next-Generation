@@ -16,7 +16,6 @@
     <None Remove="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\Repositoires\" />
     <Folder Include="Interface\Entities\" />
     <Folder Include="Entities\" />
   </ItemGroup>

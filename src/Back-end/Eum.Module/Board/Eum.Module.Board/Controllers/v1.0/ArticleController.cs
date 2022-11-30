@@ -2,14 +2,13 @@
 
 using Eum.Module.Board.Shared.Interface.Queries;
 using Eum.Module.Board.Shared.Models.QueryModels;
+using Eum.Shared.Common.Bases;
 
 namespace Eum.Module.Board.Controllers.v1._0
 {
 
-    [ApiController]
     [ApiVersion("1.0")]
-    [Route("/api/v{version:apiVersion}/[controller]")]
-    internal class ArticleController : ControllerBase
+    internal class ArticleController : EumControllerBase
     {
         private readonly IArticleQueries _articleQueries;
         private readonly IMediator _mediator;

@@ -1,7 +1,7 @@
 ﻿
 namespace Eum.Module.Board.Shared.Models.QueryModels;
 
-public record Article
+public record Article  
 {
     public string Subject { get; init; }
     public List<Comment> Comments { get; set; }
@@ -20,4 +20,4 @@ public record Recommand
 {
 
 }
-
+ 

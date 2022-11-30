@@ -1,6 +1,5 @@
-﻿namespace Eum.Shared.Common.Interfaces
+﻿namespace Eum.Shared.Common.Interfaces;
+
+public interface IAggregateRoot
 {
-    public interface IAggregateRoot
-    {
-    }
 }

@@ -1,25 +1,24 @@
-﻿namespace Eum.Shared.Common.Bases
+﻿namespace Eum.Shared.Common.Bases;
+
+public abstract class EntityBase
 {
-	public abstract class EntityBase
-	{
-        private int _Id;
-        public int Id
+    private int _Id;
+    public int Id
+    {
+        get
         {
-            get
-            {
-                return _Id;
-            }
-            protected set
-            {
-                _Id = value;
-            }
+            return _Id;
         }
-
-        public string CreatedId { get; set; }
-        public string UpdatedId { get; set; }
-        public DateTime CreatedDate { get; set; }  
-        public DateTime UpdatedDate { get; set; }  
-
+        protected set
+        {
+            _Id = value;
+        }
     }
+
+    public string CreatedId { get; set; }
+    public string UpdatedId { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public DateTime UpdatedDate { get; set; }
+
 }
 
