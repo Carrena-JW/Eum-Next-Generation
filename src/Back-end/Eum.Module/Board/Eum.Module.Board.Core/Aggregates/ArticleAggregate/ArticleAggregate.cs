@@ -17,7 +17,7 @@ public class ArticleAggregate : EntityBase, IAggregateRoot
         this.Contents = contents;
         this.Subject = subject;
     }
-
-
 }
+
+
 

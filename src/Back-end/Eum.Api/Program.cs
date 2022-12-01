@@ -15,8 +15,7 @@ try
         .EumWebApplicationBuilder()
         .AddEumModule(container =>
         {
-           
-            container.RegisterModule(new EumBoardModule());
+           container.RegisterModule(new EumBoardModule());
         })
         .Build()
         .EumWebApplication()
