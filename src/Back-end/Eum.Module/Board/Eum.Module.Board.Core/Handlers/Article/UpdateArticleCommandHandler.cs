@@ -1,4 +1,6 @@
-﻿namespace Eum.Module.Board.Core.Handlers.Commands.Article;
+﻿using Eum.Module.Board.Shared.Models.Entities;
+
+namespace Eum.Module.Board.Core.Handlers.Commands.Article;
 
 public class UpdateArticleCommandHandler :  IRequestHandler<UpdateArticleCommand, bool>
 {

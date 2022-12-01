@@ -1,5 +1,4 @@
 ﻿namespace Eum.Module.Board.Core.Commands.Article;
-
 public record CreateArticleCommand : IRequest<int>
 {
 
