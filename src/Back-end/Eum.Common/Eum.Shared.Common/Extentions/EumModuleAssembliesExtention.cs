@@ -22,12 +22,12 @@ public static class EumModuleAssembliesExtention
 
     }
 
-    public static ContainerBuilder RegisterEumRepository(this ContainerBuilder container)
+    public static ContainerBuilder RegisterEumServiceModule(this ContainerBuilder container)
     {
-        var relatedModules = AppDomain.CurrentDomain.GetEumRelatedAssemblies();
+        var referencedModules = AppDomain.CurrentDomain.GetEumModuleAssemblies();
 
-        container.RegisterAssemblyTypes(relatedModules)
-                .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queires"))
+        container.RegisterAssemblyTypes(referencedModules)
+                .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queires") || t.Name.EndsWith("AggregateService"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
         return container;

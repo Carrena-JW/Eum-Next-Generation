@@ -13,9 +13,6 @@ public class EumBoardModule : Autofac.Module
 
     protected override void Load(ContainerBuilder builder)
     {
-         
-
-
-        builder.RegisterEumRepository();
+        builder.RegisterEumServiceModule();
     }
 }

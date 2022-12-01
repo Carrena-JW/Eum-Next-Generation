@@ -2,6 +2,7 @@
 
 public interface IArticleQueries : IQueries
 {
-    Task<IEnumerable<T>> GetAllArticle<T>() where T : Article;
+    Task<IEnumerable<T>> GetArticles<T>() where T : ArticleQueryModel;
+    Task<IEnumerable<T>> GetArticleById<T>(int id) where T : ArticleQueryModel;
 }
 

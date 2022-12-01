@@ -14,14 +14,14 @@ namespace Eum.Module.Board.Controllers.v1._0
         public async Task<IActionResult> Get()
         {
            //  throw new Exception();
-            return Ok("this is version v1.0");
+            return Ok(await Task.FromResult("this is version v1.0"));
         }
 
         [HttpGet]
         [MapToApiVersion("2.0")]
         public async Task<IActionResult> GetV2()
         {
-            return Ok("this is version v2.0");
+            return Ok(await Task.FromResult( "this is version v2.0"));
         }
     }
 

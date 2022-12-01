@@ -2,10 +2,23 @@
 
 public class RepositoryBase : IDisposable
 {
-    public RepositoryBase(string connectionStringKey)
+
+    private string _connectionStrings;
+    protected string connectionStrings { get { return _connectionStrings; } }
+
+    public RepositoryBase(string conStr = null)
     {
-        string text = connectionStringKey ?? "EumCommon";
+        var keyValue = "EumCommon";
+
+        if (!string.IsNullOrEmpty(conStr))
+        {
+            keyValue = conStr;
+        }
+
+        _connectionStrings = Static.Configuration.GetConnectionString(keyValue);
     }
+
+
     public void Dispose()
     {
          

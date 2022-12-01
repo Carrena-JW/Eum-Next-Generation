@@ -13,7 +13,7 @@ public class ArticleRepository : RepositoryBase, IArticleRepository<ArticleAggre
 {
     public List<ArticleRepositoryModel> _list;
     
-  
+    
 
     public ArticleRepository() : base("EumBoard")
     {

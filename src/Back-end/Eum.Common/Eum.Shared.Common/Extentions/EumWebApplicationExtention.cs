@@ -1,4 +1,6 @@
 ﻿
+using Microsoft.Extensions.Configuration;
+
 namespace Eum.Shared.Common.Extentions;
 
 public static class EumWebApplicationExtention
@@ -46,11 +48,21 @@ public static class EumWebApplicationExtention
         #endregion
 
 
+
         return builder;
     }
 
     public static WebApplication EumWebApplication(this WebApplication app)
     {
+        #region [Appsettings]
+
+        Static.Configuration = new ConfigurationBuilder()
+                .AddJsonFile("appsettings.json")
+                .Build();
+
+        #endregion
+
+
         #region [Swagger]
         EumSwaggerHelper.provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
