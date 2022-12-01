@@ -1,6 +1,4 @@
-﻿using Eum.Module.Board.Shared.Models.Entities;
-
-namespace Eum.Module.Board.Infrastructure.Repositoires;
+﻿namespace Eum.Module.Board.Infrastructure.Repositoires;
 
 public class ArticleRepository : RepositoryBase, IArticleRepository<ArticleEntity>
 {

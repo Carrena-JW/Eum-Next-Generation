@@ -1,7 +1,7 @@
 ﻿global using Dapper;
-global using Eum.Module.Board.Shared.Entities;
 global using Eum.Module.Board.Shared.Interface.Queries;
 global using Eum.Module.Board.Shared.Interface.Repositoires;
+global using Eum.Module.Board.Shared.Models.Entities;
 global using Eum.Module.Board.Shared.Models.QueryViewModels;
 global using Eum.Shared.Common.Bases;
 global using Eum.Shared.Common.CommonViewModels;
