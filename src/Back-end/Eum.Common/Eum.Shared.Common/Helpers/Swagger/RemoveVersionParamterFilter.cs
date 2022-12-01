@@ -1,6 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Swagger;
+﻿namespace Eum.Shared.Common.Swagger;
 
 public class RemoveVersionParamterFilter : IOperationFilter
 {

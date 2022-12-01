@@ -1,9 +1,7 @@
-﻿using Eum.Shared.Common.Bases;
-
-namespace Eum.Module.Board.Shared.Interface.Repositoires;
-public interface IArticleRepository<T> :  IRepository<T> where T : class, IAggregateRoot
+﻿namespace Eum.Module.Board.Shared.Interface.Repositoires;
+public interface IArticleRepository<T> :  IRepository<T>  where T : IEntity
 {
-    Task<int> CreateArticle(T aggregate);
-    Task UpdateArticle(T aggregate);
-    Task DeleteArticle(int id);
+    Task<int> CreateArticleAsync(T data);
+    Task UpdateArticleAsync(T data);
+    Task DeleteArticleAsync(int id);
 }

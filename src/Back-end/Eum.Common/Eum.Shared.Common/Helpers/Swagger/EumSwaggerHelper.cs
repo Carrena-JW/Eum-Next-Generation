@@ -1,7 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Swagger;
-
+﻿namespace Eum.Shared.Common.Swagger;
 public class EumSwaggerHelper
 {
     public static IApiVersionDescriptionProvider provider { get; set; } 

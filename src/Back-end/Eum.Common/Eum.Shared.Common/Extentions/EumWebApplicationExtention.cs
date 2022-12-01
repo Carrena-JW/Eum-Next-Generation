@@ -1,8 +1,5 @@
 ﻿
-using Microsoft.Extensions.Configuration;
-
 namespace Eum.Shared.Common.Extentions;
-
 public static class EumWebApplicationExtention
 {
 
@@ -23,8 +20,8 @@ public static class EumWebApplicationExtention
         #endregion
 
         #region [Repository Dependency Injection : Using AutoFac]
+        //각 모듈 하위로 이동
         //var eumAssemblies = AppDomain.CurrentDomain.GetEumModuleAssemblies();
-
         //builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(builder =>
         // {
         //     //builder.RegisterGeneric(typeof(IRepository<>)).InstancePerLifetimeScope();
@@ -38,22 +35,24 @@ public static class EumWebApplicationExtention
         #endregion
 
         #region [Library Dependency Injection : AutoMapper, MediatR]
-        ////builder.Services.AddAutoMapper(eumAssemblies).AddMediatR(eumAssemblies);
+        //mapper 는 사용 보류(안해도 될 거같은데) 
         var eumAssemblies = AppDomain.CurrentDomain.GetEumModuleAssemblies();
-        builder.Services.AddAutoMapper(eumAssemblies);
+        builder.Services.AddMediatR(eumAssemblies);
         #endregion
 
         #region [SeriLog]
         builder.Host.UseSerilog(EumSeriLogHelper.ConfigureEumLogger);
         #endregion
 
-
-
         return builder;
     }
 
     public static WebApplication EumWebApplication(this WebApplication app)
     {
+        #region [ServiceProvider]
+        Static.ServiceProvider = app.Services;
+        #endregion
+
         #region [Appsettings]
 
         Static.Configuration = new ConfigurationBuilder()

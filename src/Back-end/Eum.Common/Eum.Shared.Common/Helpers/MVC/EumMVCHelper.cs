@@ -1,7 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Helpers.MVC;
-
+﻿namespace Eum.Shared.Common.Helpers.MVC;
 public class EumMVCHelper
 {
     public static void ConfigureApiVersoning(ApiVersioningOptions options)

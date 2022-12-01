@@ -1,8 +1,4 @@
-﻿
-
-
-namespace Eum.Module.Board.Controllers.v2;
-
+﻿namespace Eum.Module.Board.Controllers.v2;
 
 [ApiVersion("2.0")]
 internal class BoardAdminController : EumControllerBase

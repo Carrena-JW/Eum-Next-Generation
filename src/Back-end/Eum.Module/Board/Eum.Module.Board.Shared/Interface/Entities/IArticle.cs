@@ -1,12 +1,9 @@
-﻿
+﻿namespace Eum.Module.Board.Shared.Interfaces;
 
-namespace Eum.Module.Board.Shared.Interfaces
-{
-	public interface IArticle : IEntity
+//미사용 우선
+public interface IArticle 
     {
-		
-		public string Subject { get; set; }
-		public string Content { get; set; }
-	}
+	public string Subject { get; set; }
+	public string Content { get; set; }
 }
 

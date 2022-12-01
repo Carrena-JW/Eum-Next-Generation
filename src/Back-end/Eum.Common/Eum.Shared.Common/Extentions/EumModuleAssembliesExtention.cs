@@ -1,6 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Extentions;
+﻿namespace Eum.Shared.Common.Extentions;
 
 public static class EumModuleAssembliesExtention
 {
@@ -9,9 +7,7 @@ public static class EumModuleAssembliesExtention
 		var assemblies = appDomain.GetAssemblies();
             
             return assemblies.Where(a =>  a.FullName.StartsWith("Eum.Module")).ToArray();
-            
 	}
-
 
     public static Assembly[] GetEumRelatedAssemblies(this AppDomain appDomain)
     {
@@ -19,7 +15,6 @@ public static class EumModuleAssembliesExtention
         var assemblies = AppDomain.CurrentDomain.GetAssemblies();
         var relatedModules = assemblies.Where(a => a.FullName.StartsWith(currentFullName));
         return relatedModules.ToArray();
-
     }
 
     public static ContainerBuilder RegisterEumServiceModule(this ContainerBuilder container)
@@ -30,6 +25,7 @@ public static class EumModuleAssembliesExtention
                 .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queires") || t.Name.EndsWith("AggregateService"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
+        
         return container;
     }
 }

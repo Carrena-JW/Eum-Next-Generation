@@ -1,7 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Extentions;
-
+﻿namespace Eum.Shared.Common.Extentions;
 public static class ControllerExtentions
 {
     public static IServiceCollection AddEumController(this IServiceCollection services)

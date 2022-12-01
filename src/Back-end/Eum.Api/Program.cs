@@ -10,7 +10,6 @@ Log.Information("Starting up");
 
 try
 {
-
     WebApplication.CreateBuilder(args)
         .EumWebApplicationBuilder()
         .AddEumModule(container =>

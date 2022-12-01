@@ -12,8 +12,6 @@
     <None Remove="Interface\Entities\" />
     <None Remove="Entities\" />
     <None Remove="DTO\" />
-    <None Remove="DTO\Response\" />
-    <None Remove="DTO\Request\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Interface\Entities\" />

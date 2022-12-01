@@ -1,6 +1,4 @@
-﻿
-namespace Eum.Shared.Common;
-
+﻿namespace Eum.Shared.Common;
 public static class Static
 {
     public static IServiceProvider ServiceProvider { get; set; }
@@ -11,7 +9,6 @@ public static class Static
         return ServiceProvider.Resolve<T>();
     }
 }
-
 public static class ServiceExtensions
 {
     public static T Resolve<T>(this IServiceProvider serviceProvider)

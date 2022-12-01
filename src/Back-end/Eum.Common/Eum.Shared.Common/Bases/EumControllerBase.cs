@@ -4,4 +4,5 @@
 [Route("/api/v{version:apiVersion}/[controller]")]
 public class EumControllerBase : ControllerBase
 {
+	
 }

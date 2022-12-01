@@ -1,5 +1,4 @@
 ﻿namespace Eum.Shared.Common.Controllers;
-
 internal class ControllerProvier : ControllerFeatureProvider
 {
     protected override bool IsController(TypeInfo typeInfo)

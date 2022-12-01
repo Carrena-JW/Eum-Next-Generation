@@ -1,7 +1,4 @@
-﻿
-
-namespace Eum.Shared.Common.Helpers.SeriLog;
-
+﻿namespace Eum.Shared.Common.Helpers.SeriLog;
 public class EumSeriLogHelper
 {
     public static void ConfigureEumLogger(HostBuilderContext context, LoggerConfiguration config)

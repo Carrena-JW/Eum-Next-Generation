@@ -1,7 +1,6 @@
-﻿
-namespace Eum.Module.Board.Shared.Models.QueryModels;
+﻿namespace Eum.Module.Board.Shared.Models.QueryViewModels;
 
-public record ArticleQueryModel
+public record AritlceQueryViewModel
 {
     public string Subject { get; init; }
     public List<CommentQueryModel> Comments { get; set; }
