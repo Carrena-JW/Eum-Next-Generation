@@ -6,7 +6,7 @@ public static class EumModuleAssembliesExtention
 	{
 		var assemblies = appDomain.GetAssemblies();
             
-            return assemblies.Where(a =>  a.FullName.StartsWith("Eum.Module")).ToArray();
+            return assemblies.Where(a =>  a.FullName.StartsWith("Eum.Module.")).ToArray();
 	}
 
     public static Assembly[] GetEumRelatedAssemblies(this AppDomain appDomain)

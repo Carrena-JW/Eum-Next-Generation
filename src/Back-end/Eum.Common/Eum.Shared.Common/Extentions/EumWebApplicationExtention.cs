@@ -1,5 +1,4 @@
-﻿
-namespace Eum.Shared.Common.Extentions;
+﻿namespace Eum.Shared.Common.Extentions;
 public static class EumWebApplicationExtention
 {
 
@@ -49,6 +48,10 @@ public static class EumWebApplicationExtention
 
     public static WebApplication EumWebApplication(this WebApplication app)
     {
+        var isDevelment = app.Environment.IsDevelopment();
+        EumSwaggerHelper.provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
+
+
         #region [ServiceProvider]
         Static.ServiceProvider = app.Services;
         #endregion
@@ -61,30 +64,42 @@ public static class EumWebApplicationExtention
 
         #endregion
 
-
         #region [Swagger]
-        EumSwaggerHelper.provider = app.Services.GetRequiredService<IApiVersionDescriptionProvider>();
 
-        if (app.Environment.IsDevelopment())
+        if (isDevelment)
         {
             app.UseSwagger(EumSwaggerHelper.ConfigureSwagger)
                .UseSwaggerUI(EumSwaggerHelper.ConfigureSwaggerUI);
+ 
         }
+
         #endregion
 
         #region [Default Web Api]
         app.UseStaticFiles()
            .UseRouting()
-           .UseEndpoints(endpoints => { endpoints.MapControllers(); });
+           .UseEndpoints(endpoints =>
+           {
+               //[Root path redirect]
+               if (isDevelment)
+               {
+                   endpoints.MapGet("/", async context =>
+                   {
+                       context.Response.Redirect("/swagger");
+                       await Task.CompletedTask;
+                   });
+               }
+
+               endpoints.MapControllers();
+           });
         #endregion
 
         return app;
     }
 
-    public static WebApplicationBuilder AddEumModule(this WebApplicationBuilder builder, Action<ContainerBuilder> container ) {
-
+    public static WebApplicationBuilder AddEumModule(this WebApplicationBuilder builder, Action<ContainerBuilder> container)
+    {
         builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(container);
-
         return builder;
     }
 }
