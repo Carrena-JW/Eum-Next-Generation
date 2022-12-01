@@ -1,4 +1,3 @@
-using Eum.Shared.Common.Bases;
 
 namespace TestProject1
 {

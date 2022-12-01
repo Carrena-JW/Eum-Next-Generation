@@ -7,8 +7,8 @@ internal class ArticlesController : EumControllerBase
     private readonly IMediator _mediator;
     public ArticlesController(IArticleQueries articleQueries, IMediator mediator)
     {
-        _articleQueries = articleQueries;
-        _mediator = mediator;
+        _articleQueries = articleQueries;  
+        _mediator = mediator;  
     }
 
     [HttpGet]

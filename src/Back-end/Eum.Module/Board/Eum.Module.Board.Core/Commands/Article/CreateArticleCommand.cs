@@ -1,6 +1,7 @@
 ﻿namespace Eum.Module.Board.Core.Commands.Article;
 public record CreateArticleCommand : IRequest<int>
 {
+    public bool isSendEmail { get; set; }
 
     public string Subject { get; set; }
     public string Contents { get; set; }

@@ -1,6 +1,3 @@
-using Autofac;
-using Autofac.Extensions.DependencyInjection;
-using Eum.Module.Board;
 
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
@@ -15,11 +12,11 @@ try
         .AddEumModule(container =>
         {
            container.RegisterModule(new EumBoardModule());
+           container.RegisterModule(new EumFeelanetModule());
         })
         .Build()
         .EumWebApplication()
         .Run();
-
 }
 catch (Exception ex)
 {

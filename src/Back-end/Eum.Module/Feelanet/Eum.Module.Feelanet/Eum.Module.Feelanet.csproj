@@ -15,6 +15,7 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
     <ProjectReference Include="..\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj" />
     <ProjectReference Include="..\Eum.Module.Feelanet.Infrastructure\Eum.Module.Feelanet.Infrastructure.csproj" />
   </ItemGroup>

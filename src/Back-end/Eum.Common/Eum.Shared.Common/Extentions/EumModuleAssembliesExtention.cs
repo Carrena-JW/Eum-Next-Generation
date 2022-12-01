@@ -2,12 +2,12 @@
 
 public static class EumModuleAssembliesExtention
 {
-	public static Assembly[] GetEumModuleAssemblies(this AppDomain appDomain)
-	{
-		var assemblies = appDomain.GetAssemblies();
-            
-            return assemblies.Where(a =>  a.FullName.StartsWith("Eum.Module.")).ToArray();
-	}
+    private static readonly string defaultModuleName = "Eum.Module.";
+    public static Assembly[] GetEumModuleAssemblies(this AppDomain appDomain, string specificModuleName = null)
+    {
+        var assemblies = appDomain.GetAssemblies();
+        return assemblies.Where(a => a.FullName.StartsWith(specificModuleName ?? defaultModuleName)).ToArray();
+    }
 
     public static Assembly[] GetEumRelatedAssemblies(this AppDomain appDomain)
     {
@@ -19,13 +19,15 @@ public static class EumModuleAssembliesExtention
 
     public static ContainerBuilder RegisterEumServiceModule(this ContainerBuilder container)
     {
-        var referencedModules = AppDomain.CurrentDomain.GetEumModuleAssemblies();
+        var calling = Assembly.GetCallingAssembly();
+        var rootModuleName = calling.FullName.Split(",")[0] ?? defaultModuleName;
+        var referencedModules = AppDomain.CurrentDomain.GetEumModuleAssemblies(rootModuleName);
 
         container.RegisterAssemblyTypes(referencedModules)
-                .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queires") || t.Name.EndsWith("AggregateService"))
+                .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queries"))
                 .AsImplementedInterfaces()
                 .InstancePerLifetimeScope();
-        
+
         return container;
     }
 }

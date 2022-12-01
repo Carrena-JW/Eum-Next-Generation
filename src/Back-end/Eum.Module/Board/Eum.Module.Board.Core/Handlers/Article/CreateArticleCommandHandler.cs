@@ -14,6 +14,7 @@ public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand,
 
     public async Task<int> Handle(CreateArticleCommand message, CancellationToken cancellationToken)
     {
+        
         var entity = new ArticleEntity
         {
             Subject = message.Subject,

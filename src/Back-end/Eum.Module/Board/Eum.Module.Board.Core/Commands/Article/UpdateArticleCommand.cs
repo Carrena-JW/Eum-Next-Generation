@@ -12,4 +12,4 @@ public record UpdateArticleCommand : IRequest<bool>
         Contents = contents;
     }
 }
-
+ 
