@@ -1,10 +1,10 @@
 ﻿namespace Eum.Module.Board.Infrastructure.Repositoires;
 
-public class ArticleRepository : RepositoryBase, IArticleRepository<ArticleEntity>
+public class ArticleRepository<T> : RepositoryBase, IArticleRepository<T> where T : ArticleEntity
 {
     public ArticleRepository() : base("EumBoard") { }
 
-    public async Task<int> CreateArticleAsync(ArticleEntity data)
+    public virtual async Task<int> CreateArticleAsync(T data)
     {
         using var connection = new SqlConnection(base.connectionStrings);
         connection.Open();
@@ -14,7 +14,7 @@ public class ArticleRepository : RepositoryBase, IArticleRepository<ArticleEntit
         return (await connection.QueryAsync<int>(qs, data)).FirstOrDefault();
     }
 
-    public async Task UpdateArticleAsync(ArticleEntity data)
+    public virtual async Task UpdateArticleAsync(T data)
     {
         using var connection = new SqlConnection(base.connectionStrings);
         connection.Open();
@@ -24,7 +24,7 @@ public class ArticleRepository : RepositoryBase, IArticleRepository<ArticleEntit
         await connection.ExecuteAsync(qs, data);
     }
 
-    public async Task DeleteArticleAsync(int id)
+    public virtual async Task DeleteArticleAsync(int id)
     {
         using var connection = new SqlConnection(base.connectionStrings);
         connection.Open();

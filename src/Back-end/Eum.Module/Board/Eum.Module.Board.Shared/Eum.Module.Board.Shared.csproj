@@ -16,6 +16,7 @@
   <ItemGroup>
     <Folder Include="Interface\Entities\" />
     <Folder Include="Models\Entities\" />
+    <Folder Include="Models\RequestModels\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
