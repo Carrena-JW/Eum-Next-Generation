@@ -15,11 +15,13 @@ public class UpdateArticleCommandHandler :  IRequestHandler<UpdateArticleCommand
    
     public async Task<bool> Handle(UpdateArticleCommand message, CancellationToken cancellationToken)
     {
+        //validation 은 핸들러에서 처리한다.
+
         var entity = new ArticleEntity
         {
             Id = message.Id,
             Subject = message.Subject,
-            Content = message.Contents
+            Contents = message.Contents
         };
 
         await _repository.UpdateArticleAsync(entity);

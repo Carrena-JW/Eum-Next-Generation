@@ -2,17 +2,14 @@
 
 public record AritlceQueryViewModel
 {
+    public int Id { get; set; }
     public string Subject { get; init; }
-    public List<CommentQueryModel> Comments { get; set; }
-    public List<RecommandQueryModel> Recommands { get; set; }
-    public string CreatedUserName { get; init; }
-    public string CreatedUserTitle { get; init; }
-    public string CreatedUserDeptName { get; init; }
+    public string Contents { get; set; }
+         
 }
 
 public record CommentQueryModel
 {
-     
 }
 
 public record RecommandQueryModel

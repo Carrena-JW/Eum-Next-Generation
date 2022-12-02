@@ -2,6 +2,6 @@
 //marker interface
 public interface IRepository<T> 
 {
-   
+     
 }
 

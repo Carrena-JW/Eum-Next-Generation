@@ -7,8 +7,8 @@ internal class ArticlesController : EumControllerBase
     private readonly IMediator _mediator;
     public ArticlesController(IArticleQueries articleQueries, IMediator mediator)
     {
-        _articleQueries = articleQueries;  
-        _mediator = mediator;  
+        _articleQueries = articleQueries;
+        _mediator = mediator;
     }
 
     [HttpGet]
@@ -24,16 +24,19 @@ internal class ArticlesController : EumControllerBase
     }
 
     [HttpGet("paginated")]
-    public async Task<IActionResult> GetPaginatedArticles([FromQuery] int pageSize = 10, [FromQuery] int pageIndex = 0, [FromQuery] string searchWord = "")
+    public async Task<IActionResult> GetPaginatedArticles([FromQuery] ArticlePaginatedRequest parameter)
     {
-        return Ok(await _articleQueries.GetPaginatedArticles<AritlceQueryViewModel>(pageSize, pageIndex, searchWord));
+        this.Required(() => parameter.PageSize);
+        this.Required(() => parameter.PageIndex);
+        this.Required(() => parameter.Keyword);
+
+        return Ok(await _articleQueries.GetPaginatedArticles<AritlceQueryViewModel>(parameter));
     }
 
     [HttpPost]
     public async Task<IActionResult> CreateArticle([FromBody] CreateArticleCommand message)
     {
-        var result = await _mediator.Send(message);
-        return CreatedAtAction("CreatedArticle", result);
+        return Ok(await _mediator.Send(message));
     }
 
     [HttpPut]
@@ -42,8 +45,8 @@ internal class ArticlesController : EumControllerBase
         return Ok(await _mediator.Send(message));
     }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> DeleteArticle([FromBody] UpdateArticleCommand message)
+    [HttpDelete("{message.Id}")]
+    public async Task<IActionResult> DeleteArticle(DeleteArticleCommand message)
     {
         return Ok(await _mediator.Send(message));
     }

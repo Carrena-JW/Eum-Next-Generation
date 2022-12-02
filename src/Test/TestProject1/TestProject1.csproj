@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\Back-end\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
+    <ProjectReference Include="..\..\Back-end\Eum.Module\Board\Eum.ModuleBoard.Infrastructure\Eum.Module.Board.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

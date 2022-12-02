@@ -1,4 +1,6 @@
-﻿namespace Eum.Shared.Common.Extentions;
+﻿using Eum.Shared.Common.Interfaces;
+
+namespace Eum.Shared.Common.Extentions;
 
 public static class EumModuleAssembliesExtention
 {
@@ -17,18 +19,24 @@ public static class EumModuleAssembliesExtention
         return relatedModules.ToArray();
     }
 
-    public static ContainerBuilder RegisterEumServiceModule(this ContainerBuilder container)
+    public static ContainerBuilder RegisterMediatorModule(this ContainerBuilder container)
     {
         var calling = Assembly.GetCallingAssembly();
         var rootModuleName = calling.FullName.Split(",")[0] ?? defaultModuleName;
         var referencedModules = AppDomain.CurrentDomain.GetEumModuleAssemblies(rootModuleName);
 
         container.RegisterAssemblyTypes(referencedModules)
-                .Where(t => t.Name.EndsWith("Repository") || t.Name.EndsWith("Queries"))
-                .AsImplementedInterfaces()
-                .InstancePerLifetimeScope();
+                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
+
+        container.Register<ServiceFactory>(context =>
+        {
+            var componentContext = context.Resolve<IComponentContext>();
+            return t => { object o; return componentContext.TryResolve(t, out o) ? o : null; };
+        });
+
 
         return container;
+
     }
 }
 

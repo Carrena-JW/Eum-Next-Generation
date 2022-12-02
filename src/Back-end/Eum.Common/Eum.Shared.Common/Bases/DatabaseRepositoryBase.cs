@@ -14,7 +14,7 @@ public class DatabaseRepositoryBase : IDisposable
         {
             keyValue = conStr;
         }
-        var newCon = Static.Configuration[$"ConnectionStrings:{keyValue}"];
+        //var newCon = Static.Configuration.GetSection().[$"ConnectionStrings:{keyValue}"];
         //Static.Configuration.p
         _connectionStrings = Static.Configuration.GetConnectionString(keyValue);
     }

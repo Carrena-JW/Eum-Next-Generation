@@ -58,9 +58,7 @@ public static class EumWebApplicationExtention
 
         #region [Appsettings]
 
-        Static.Configuration = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
-                .Build();
+        Static.Configuration = app.Services.GetRequiredService<IConfiguration>();
 
         #endregion
 
