@@ -1,5 +1,6 @@
 ﻿namespace Eum.Module.Board.Shared.Models.Entities;
-public class ArticleEntity : IEntity
+
+public class ArticleEntity : EntityBase, IEntity
 {
     public int Id { get; set; }
     public string Subject { get; set; } = string.Empty;

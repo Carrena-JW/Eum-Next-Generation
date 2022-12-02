@@ -8,4 +8,6 @@ public class EumBoardModule : Autofac.Module
     {
         builder.RegisterEumServiceModule();
     }
+
+    public 
 }

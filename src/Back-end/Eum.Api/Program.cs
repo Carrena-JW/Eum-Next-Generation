@@ -10,7 +10,7 @@ try
     WebApplication.CreateBuilder(args)
         .EumWebApplicationBuilder()
         .AddEumModule(container =>
-        {
+        {  
            container.RegisterModule(new EumBoardModule());
            container.RegisterModule(new EumFeelanetModule());
         })
