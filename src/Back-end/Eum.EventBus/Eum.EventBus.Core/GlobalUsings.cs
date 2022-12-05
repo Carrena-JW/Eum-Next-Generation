@@ -1,0 +1,12 @@
+﻿global using Eum.EventBus.Abstractions;
+global using Eum.EventBus.Core.InMemory;
+global using Eum.EventBus.Core.MultiChannel;
+global using Eum.EventBus.Core.Serialization;
+global using Microsoft.Extensions.DependencyInjection;
+global using Newtonsoft.Json;
+global using Newtonsoft.Json.Converters;
+global using Newtonsoft.Json.Serialization;
+global using System;
+global using System.Collections.Generic;
+global using System.Reflection;
+global using System.Threading.Tasks;

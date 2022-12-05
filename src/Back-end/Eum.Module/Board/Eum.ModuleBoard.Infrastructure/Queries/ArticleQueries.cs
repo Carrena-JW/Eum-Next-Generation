@@ -19,11 +19,10 @@ public class ArticleQueries : QueryBase, IArticleQueries
 SELECT * FROM [vw_article]
 ";
 
-        var result = await connection.QueryAsync<dynamic>(query);
-        return result.Cast<T>().AsEnumerable();
+        return await connection.QueryAsync<T>(query);
     }
 
-    public virtual async Task<IEnumerable<T>> GetArticleById<T>(int id) where T : AritlceQueryViewModel
+    public virtual async Task<T> GetArticleById<T>(int id) where T : AritlceQueryViewModel
     {
         using var connection = new SqlConnection(base.connectionStrings);
         connection.Open();
@@ -35,11 +34,7 @@ SELECT * FROM [vw_article]
 WHERE [id] = @id
 ";
 
-        var result = await connection.QueryAsync<dynamic>(query, new { id });
-
-         
-
-        return result.Cast<T>();
+        return (await connection.QueryAsync<T>(query, new { id })).FirstOrDefault();
     }
 
     public async Task<PaginatedViewModel<T>> GetPaginatedArticles<T>(ArticlePaginatedRequest parameter) where T : AritlceQueryViewModel
@@ -47,7 +42,7 @@ WHERE [id] = @id
         var articles = await this.GetArticles<T>();
         var totalCount = Convert.ToInt32(articles.Count());
 
-        Func<T, T> contentsSelector = (r) =>
+        var contentsSelector = (T r) =>
         {
             if(!parameter.IncludeContents) return r; //ealry return
 
@@ -55,7 +50,7 @@ WHERE [id] = @id
             return r;
         };
 
-        var paginatedData = articles.Where(r => r.Subject.ToLowerInvariant().Equals(parameter.Keyword))
+        var paginatedData = articles.Where(r => r.Subject.ToLowerInvariant().Contains(parameter.Keyword))
                                     .Select(contentsSelector)
                                     .OrderBy(r => r.Subject)
                                     .Skip(parameter.PageSize.Value * parameter.PageIndex.Value)

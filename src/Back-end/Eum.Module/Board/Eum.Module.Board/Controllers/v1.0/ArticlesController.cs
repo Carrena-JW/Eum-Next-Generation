@@ -28,7 +28,7 @@ internal class ArticlesController : EumControllerBase
     {
         this.Required(() => parameter.PageSize);
         this.Required(() => parameter.PageIndex);
-        this.Required(() => parameter.Keyword);
+        //this.Required(() => parameter.Keyword);
 
         return Ok(await _articleQueries.GetPaginatedArticles<AritlceQueryViewModel>(parameter));
     }
