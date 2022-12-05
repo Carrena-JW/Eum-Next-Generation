@@ -107,5 +107,11 @@ public static class EumWebApplicationExtention
         builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(container);
         return builder;
     }
+
+    public static WebApplicationBuilder AddEumEventBus(this WebApplicationBuilder builder, Action<IServiceCollection> setAction)
+    {
+        setAction(builder.Services);
+        return builder;
+    }
 }
 

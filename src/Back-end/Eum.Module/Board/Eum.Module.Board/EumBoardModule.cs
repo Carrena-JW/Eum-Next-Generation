@@ -1,4 +1,6 @@
 ﻿
+using Eum.Shared.Common;
+
 namespace Eum.Module.Board;
 
 public class EumBoardModule : Autofac.Module
@@ -13,5 +15,7 @@ public class EumBoardModule : Autofac.Module
         builder.RegisterGeneric(typeof(ArticleRepository<>)).As(typeof(IArticleRepository<>)).InstancePerLifetimeScope();
         builder.RegisterType<ArticleQueries>().As<IArticleQueries>().InstancePerLifetimeScope();
         builder.RegisterType<MasterEventBus>().As<IEventPublisher>().SingleInstance();
+
+        
     }
 }

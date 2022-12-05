@@ -6,12 +6,23 @@ Log.Information("Starting up");
 
 try
 {
-    var builder = WebApplication.CreateBuilder(args);
-    builder.Services.AddEventBus(builder =>
-    {
-        builder
-            .AddInMemoryEventBus(subscriber => { subscriber.Subscribe<IBoardEvent, RouteBoardEventHandler>(); });
-    });
+    var builder = WebApplication.CreateBuilder(args)
+        .AddEumEventBus(services =>
+        {
+            services.AddEventBus(builder =>
+            {
+                builder.AddInMemoryEventBus(subscriber =>
+                {
+
+                });
+            });
+        });
+    
+    // builder.Services.AddEventBus(builder =>
+    // {
+    //     builder
+    //         .AddInMemoryEventBus(subscriber => { subscriber.Subscribe<IBoardEvent, RouteBoardEventHandler>(); });
+    // });
 
     builder.EumWebApplicationBuilder()
         .AddEumModule(container =>
