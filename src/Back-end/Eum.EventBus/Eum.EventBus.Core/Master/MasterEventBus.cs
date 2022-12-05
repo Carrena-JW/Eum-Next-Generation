@@ -1,8 +1,8 @@
 ﻿namespace Eum.EventBus.Core.MultiChannel;
 
-internal class MasterEventBus : IEventPublisher
+public class MasterEventBus : IEventPublisher
 {
-    private readonly IServiceProvider _serviceProvider;
+    //private readonly IServiceProvider _serviceProvider;
     private readonly IEventPublisherProvider _eventPublishers;
 
     public MasterEventBus(

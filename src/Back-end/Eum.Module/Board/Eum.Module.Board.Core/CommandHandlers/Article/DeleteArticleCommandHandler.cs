@@ -1,6 +1,5 @@
-﻿using Eum.Module.Board.Shared.Models.Entities;
+﻿namespace Eum.Module.Board.Core.CommandHandlers.Article;
 
-namespace Eum.Module.Board.Core.Handlers.Commands.Article;
 public class DeleteArticleCommandHandler :  IRequestHandler<DeleteArticleCommand, bool>
 {
     //private readonly TestDatabase _repository;

@@ -3,7 +3,6 @@ public static class Static
 {
     public static IServiceProvider ServiceProvider { get; set; }
     public static IConfiguration Configuration { get; set; }
-
     public static T Resolve<T>()
     {
         return ServiceProvider.Resolve<T>();

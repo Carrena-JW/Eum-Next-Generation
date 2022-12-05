@@ -8,17 +8,18 @@
 
   <ItemGroup>
     <None Remove="Interface\" />
-    <None Remove="Interface\Repositoires\" />
-    <None Remove="Interface\Entities\" />
+    <None Remove="Interfaces\Repositoires\" />
+    <None Remove="Interfaces\Entities\" />
     <None Remove="Entities\" />
     <None Remove="DTO\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Interface\Entities\" />
     <Folder Include="Models\Entities\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
+    <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Update="GlobalUsings.cs">

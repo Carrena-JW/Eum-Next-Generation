@@ -14,8 +14,8 @@
 
   <ItemGroup>
     <None Remove="Handlers\" />
-    <None Remove="Handlers\Commands\" />
-    <None Remove="Handlers\Queries\" />
+    <None Remove="CommandHandlers\Commands\" />
+    <None Remove="CommandHandlers\Queries\" />
     <None Remove="MediatR" />
     <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
     <None Remove="Interfaces\" />

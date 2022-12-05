@@ -8,6 +8,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
+    <ProjectReference Include="..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
     <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj" />
     <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj" />
   </ItemGroup>

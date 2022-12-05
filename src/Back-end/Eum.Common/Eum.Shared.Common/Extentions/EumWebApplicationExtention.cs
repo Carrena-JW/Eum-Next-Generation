@@ -1,9 +1,15 @@
-﻿namespace Eum.Shared.Common.Extentions;
+﻿using Autofac.Core;
+
+namespace Eum.Shared.Common.Extentions;
 public static class EumWebApplicationExtention
 {
 
     public static WebApplicationBuilder EumWebApplicationBuilder(this WebApplicationBuilder builder)
     {
+        #region [Common settings]
+        builder.Services.AddMemoryCache();
+        #endregion
+
         #region [Api Versioning]
         builder.Services.AddEndpointsApiExplorer()
                         .AddApiVersioning(EumMVCHelper.ConfigureApiVersoning)
@@ -94,6 +100,7 @@ public static class EumWebApplicationExtention
 
         return app;
     }
+
 
     public static WebApplicationBuilder AddEumModule(this WebApplicationBuilder builder, Action<ContainerBuilder> container)
     {

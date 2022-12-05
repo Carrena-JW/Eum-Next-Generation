@@ -1,18 +1,35 @@
 
+using Eum.EventBus.Core;
+using Eum.Module.Board.Core.EventHandlers;
+using Eum.Module.Board.Core.Events;
+using Eum.Shared.Common.Events;
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
-    .CreateBootstrapLogger(); 
+    .CreateBootstrapLogger();
 
 Log.Information("Starting up");
 
 try
 {
-    WebApplication.CreateBuilder(args)
-        .EumWebApplicationBuilder()
+
+   
+
+    var builder = WebApplication.CreateBuilder(args);
+        builder.Services.AddEventBus(builder =>
+         {
+             builder
+                 .AddInMemoryEventBus(subscriber =>
+                 {
+                     subscriber.Subscribe<IBoardEvent,RouteBoardEventHandler>();
+                 });
+         });
+
+        builder.EumWebApplicationBuilder()
         .AddEumModule(container =>
-        {  
-           container.RegisterModule(new EumBoardModule());
-           container.RegisterModule(new EumFeelanetModule());
+        {
+            container.RegisterModule(new EumBoardModule());
+            container.RegisterModule(new EumFeelanetModule());
         })
         .Build()
         .EumWebApplication()
