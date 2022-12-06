@@ -1,7 +1,7 @@
 ﻿namespace Eum.Module.Board.Controllers.v1._0;
 
 [ApiVersion("1.0")]
-internal class ArticlesController : EumControllerBase
+public class ArticlesController : EumControllerBase
 {
     private readonly IArticleQueries _articleQueries;
     private readonly IMediator _mediator;

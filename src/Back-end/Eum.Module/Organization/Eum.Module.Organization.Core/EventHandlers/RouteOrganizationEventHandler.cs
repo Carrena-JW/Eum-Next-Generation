@@ -1,19 +1,17 @@
-﻿namespace Eum.Module.Board.Core.EventHandlers;
 
-//RouterBase 를 만들어야되네 
-//** route 헬퍼
-//** create command 헬퍼
-// ** 타입찾는거 헬퍼
-public class RouteBoardEventHandler : IEventHandler<IBoardEvent>
+
+namespace Eum.Module.Organization.Core.EventHandlers;
+
+public class RouteOrganizationEventHandler : IEventHandler<IOrganizationEvent>
 {
     private readonly IMemoryCache _cache;
 
-    public RouteBoardEventHandler(IMemoryCache cache)
+    public RouteOrganizationEventHandler(IMemoryCache cache)
     {
         _cache = cache;
     }
 
-    public Task HandleEventAsync(IBoardEvent @event)
+    public Task HandleEventAsync(IOrganizationEvent @event)
     {
         //if (!string.IsNullOrEmpty(@event))
         //{

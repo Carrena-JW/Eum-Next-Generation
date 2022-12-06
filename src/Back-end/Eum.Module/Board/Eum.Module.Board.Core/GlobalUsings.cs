@@ -5,3 +5,7 @@ global using Eum.Module.Board.Shared.Interface.Repositoires;
 global using Eum.Module.Board.Shared.Models.Entities;
 global using MediatR;
 global using System.Threading.Tasks;
+global using Eum.EventBus.Abstractions;
+global using Microsoft.Extensions.Caching.Memory;
+global using Eum.Shared.Common.Events;
+global using Eum.EventBus.Abstractions;

@@ -14,3 +14,6 @@
 // global using MediatR;
 // global using Microsoft.AspNetCore.Mvc;
 // global using Eum.Shared.Common.Events;
+global using Eum.Shared.Common.Events;
+global using Microsoft.Extensions.Caching.Memory;
+global using Eum.EventBus.Abstractions;

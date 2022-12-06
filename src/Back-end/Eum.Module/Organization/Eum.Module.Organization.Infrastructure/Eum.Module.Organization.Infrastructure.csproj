@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Update="GlobalUsings.cs">
+        <DependentUpon>GlobalUsings.tt</DependentUpon>
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Eum.Module.Organization.Core\Eum.Module.Organization.Core.csproj" />
+      <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj" />
+    </ItemGroup>
+
+</Project>
