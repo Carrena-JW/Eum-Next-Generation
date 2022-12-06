@@ -1,3 +1,9 @@
+
+using Eum.EventBus.Core;
+using Eum.Module.Board.Core.EventHandlers;
+using Eum.Module.Board.Core.Events;
+using Eum.Shared.Common.Events;
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
@@ -6,6 +12,9 @@ Log.Information("Starting up");
 
 try
 {
+
+   
+
     var builder = WebApplication.CreateBuilder(args);
         builder.Services.AddEventBus(builder =>
          {
