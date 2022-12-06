@@ -32,4 +32,8 @@
       <AutoGen>True</AutoGen>
     </Compile>
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Events\Receive" />
+    <Folder Include="Events\Send" />
+  </ItemGroup>
 </Project>
