@@ -13,7 +13,6 @@ class EventPublisherProvider : IEventPublisherProvider
         _eventPublishers = eventPublishers;
     }
 
-
     public IEnumerable<IEventPublisher> GetEventPublishers()
     {
         return _eventPublishers.Types.Select(t => (IEventPublisher)_serviceProvider.GetService(t));

@@ -12,3 +12,4 @@ public class EventPublisherRegister
         _types.Add(typeof(TEventPublisher));
     }
 }
+
