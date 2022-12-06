@@ -2,7 +2,7 @@
 
 [ApiVersion("1.0")]
 [ApiVersion("2.0")]
-internal class BoardController : EumControllerBase
+internal class BoardsController : EumControllerBase
 {
 
     [HttpGet]

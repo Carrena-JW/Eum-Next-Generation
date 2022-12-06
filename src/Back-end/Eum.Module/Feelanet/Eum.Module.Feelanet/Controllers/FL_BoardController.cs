@@ -6,7 +6,7 @@ namespace Eum.Module.Feelanet.Controllers
 {
     [ApiController]
     [Route("/api/fl/board")]
-    internal class FL_BoardController : ControllerBase
+    internal class FL_BoardsController : ControllerBase
     {
 
         [HttpGet]

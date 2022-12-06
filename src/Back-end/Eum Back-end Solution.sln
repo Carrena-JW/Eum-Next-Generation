@@ -57,6 +57,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Organization.Inf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Organization.Shared", "Eum.Module\Organization\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj", "{44229961-460D-4870-9E5F-237F116B092B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Mail", "Eum.Module\Mail\Eum.Module.Mail\Eum.Module.Mail.csproj", "{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -131,6 +133,10 @@ Global
 		{44229961-460D-4870-9E5F-237F116B092B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{44229961-460D-4870-9E5F-237F116B092B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{44229961-460D-4870-9E5F-237F116B092B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,6 +163,7 @@ Global
 		{8C46197C-0A0A-403F-BD21-6F1C00F25416} = {74ECDDAC-EB20-4058-85DA-CFAA29AA39B2}
 		{1A17B7E9-726F-4C2D-9157-BBE010EC44F9} = {74ECDDAC-EB20-4058-85DA-CFAA29AA39B2}
 		{44229961-460D-4870-9E5F-237F116B092B} = {74ECDDAC-EB20-4058-85DA-CFAA29AA39B2}
+		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C} = {DD15EA62-42E2-4BFD-ADAA-1D3CDBA4C5A0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F7E4409-6E24-433E-AFEB-941FC51B76A2}

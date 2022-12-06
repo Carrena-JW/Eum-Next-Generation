@@ -11,6 +11,7 @@
     <ProjectReference Include="..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
     <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj" />
     <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj" />
+    <ProjectReference Include="..\Eum.Module\Organization\Eum.Module.Organization\Eum.Module.Organization.csproj" />
   </ItemGroup>
 
   <ItemGroup>
