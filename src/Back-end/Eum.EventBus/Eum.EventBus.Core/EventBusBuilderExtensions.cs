@@ -1,5 +1,4 @@
 ﻿namespace Eum.EventBus.Core;
-
 public static class EventBusBuilderExtensions
 {
     public static IEventBusBuilder AddInMemoryEventBus(this IEventBusBuilder builder, Action<IEventBusSubscriber> subscribeAction)
