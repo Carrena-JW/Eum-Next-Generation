@@ -1,9 +1,7 @@
-﻿
-namespace Eum.Shared.Common.Extentions;
+﻿namespace Eum.Shared.Common.Extentions;
 
 public static class ValidationExtensions
 {
-   
     public static void Required<T>(this object sender, Expression<Func<T>> expr,
         [CallerMemberName] string memberName = "")
     {
@@ -17,10 +15,7 @@ public static class ValidationExtensions
     private static void ThrowIfValueIsEmptyOrNull<T>(string memberName, T value, string prop)
     {
         if ((value is string && string.IsNullOrWhiteSpace(Convert.ToString(value))) ||
-           
-            (value is null))
-        {
+            value is null)
             throw new ArgumentNullException($"{memberName}()[{typeof(T).Name} {prop}] can not be null.");
-        }
     }
 }

@@ -1,12 +1,11 @@
 ﻿namespace Eum.EventBus.Core;
+
 public static class EventBusBuilderExtensions
 {
-    public static IEventBusBuilder AddInMemoryEventBus(this IEventBusBuilder builder, Action<IEventBusSubscriber> subscribeAction)
+    public static IEventBusBuilder AddInMemoryEventBus(this IEventBusBuilder builder,
+        Action<IEventBusSubscriber> subscribeAction)
     {
-        if (builder == null)
-        {
-            throw new ArgumentNullException(nameof(builder));
-        }
+        if (builder == null) throw new ArgumentNullException(nameof(builder));
 
         var subscriber = new InMemoryEventBusSubscriber(builder.Services);
         subscribeAction?.Invoke(subscriber);
@@ -16,10 +15,7 @@ public static class EventBusBuilderExtensions
 
     public static IEventBusBuilder UseJsonSerializer(this IEventBusBuilder builder)
     {
-        if (builder == null)
-        {
-            throw new ArgumentNullException(nameof(builder));
-        }
+        if (builder == null) throw new ArgumentNullException(nameof(builder));
 
         return builder.UseSerializer<JsonEventSerializer>();
     }

@@ -1,13 +1,5 @@
-﻿using System;
-namespace Eum.Module.Feelanet.Core.Handlers.Queries
+﻿namespace Eum.Module.Feelanet.Core.Handlers.Queries;
+
+public class GetArticlesQuery
 {
-	public class GetArticlesQuery
-	{
-		public GetArticlesQuery()
-		{
-		}
-	}
-
-	
 }
-

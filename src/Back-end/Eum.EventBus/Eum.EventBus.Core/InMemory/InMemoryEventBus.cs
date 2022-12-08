@@ -1,6 +1,4 @@
-﻿
-
-namespace Eum.EventBus.Core.InMemory;
+﻿namespace Eum.EventBus.Core.InMemory;
 
 public class InMemoryEventBus : IEventPublisher
 {
@@ -13,17 +11,17 @@ public class InMemoryEventBus : IEventPublisher
 
     public async Task PublishEventAsync<TEvent>(TEvent @event)
     {
-        using (IServiceScope scope = _serviceProvider.CreateScope())
+        using (var scope = _serviceProvider.CreateScope())
         {
-            Type eventType = @event.GetType();
+            var eventType = @event.GetType();
             var interfaceTypes = eventType.GetInterfaces();
-            Type openHandlerType = typeof(IEventHandler<>);
-            Type handlerType = openHandlerType.MakeGenericType(interfaceTypes.FirstOrDefault()); // 첫번 째 상속 interface 
-            // IBoardEvent, IWorkflowEvent, IMailEvent etc
-            IEnumerable<object> handlers = scope.ServiceProvider.GetServices(handlerType);
-            foreach (object handler in handlers)
+            var openHandlerType = typeof(IEventHandler<>);
+            var handlerType = openHandlerType.MakeGenericType(interfaceTypes.FirstOrDefault()); // 첫번 째 상속 interface 
+            // IBoardModuleEvent, IWorkflowEvent, IMailEvent etc
+            var handlers = scope.ServiceProvider.GetServices(handlerType);
+            foreach (var handler in handlers)
             {
-                object result = handlerType
+                var result = handlerType
                     .GetTypeInfo()
                     .GetDeclaredMethod(nameof(IEventHandler<TEvent>.HandleEventAsync))
                     .Invoke(handler, new object[] { @event });

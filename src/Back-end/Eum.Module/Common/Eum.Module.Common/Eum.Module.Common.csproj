@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Eum.Module.Common.Core\Eum.Module.Common.Core.csproj" />
-      <ProjectReference Include="..\Eum.Module.Common.Infrastructure\Eum.Module.Common.Infrastructure.csproj" />
-      <ProjectReference Include="..\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj" />
+        <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus.Abstractions\Eum.EventBus.Abstractions.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Common.Core\Eum.Module.Common.Core.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Common.Infrastructure\Eum.Module.Common.Infrastructure.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Controllers" />
+        <Folder Include="Controllers"/>
     </ItemGroup>
 
 </Project>

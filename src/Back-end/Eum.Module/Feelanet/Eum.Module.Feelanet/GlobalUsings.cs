@@ -1,2 +1,3 @@
-﻿global using Autofac;
-global using Eum.Shared.Common.Extentions;
+﻿// global using Autofac;
+// global using Eum.Shared.Common.Extentions;
+

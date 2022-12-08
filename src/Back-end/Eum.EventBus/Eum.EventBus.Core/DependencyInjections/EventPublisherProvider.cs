@@ -1,9 +1,9 @@
 ﻿namespace Eum.EventBus.Core.DependencyInjections;
 
-class EventPublisherProvider : IEventPublisherProvider
+internal class EventPublisherProvider : IEventPublisherProvider
 {
-    private readonly IServiceProvider _serviceProvider;
     private readonly EventPublisherRegister _eventPublishers;
+    private readonly IServiceProvider _serviceProvider;
 
     public EventPublisherProvider(
         IServiceProvider serviceProvider,

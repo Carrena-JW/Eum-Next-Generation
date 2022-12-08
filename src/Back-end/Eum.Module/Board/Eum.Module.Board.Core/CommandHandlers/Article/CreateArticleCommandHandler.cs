@@ -2,9 +2,10 @@
 
 public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand, int>
 {
+    private readonly IMediator _mediator;
+
     //private readonly TestDatabase _repository;
     private readonly IArticleRepository<ArticleEntity> _repository;
-    private readonly IMediator _mediator;
 
     public CreateArticleCommandHandler(IMediator mediator, IArticleRepository<ArticleEntity> repository)
     {
@@ -13,7 +14,6 @@ public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand,
 
     public async Task<int> Handle(CreateArticleCommand message, CancellationToken cancellationToken)
     {
-       
         var entity = new ArticleEntity
         {
             Subject = message.Subject,
@@ -23,6 +23,5 @@ public class CreateArticleCommandHandler : IRequestHandler<CreateArticleCommand,
         return await _repository.CreateArticleAsync(entity);
 
         // 게시글
-        
     }
 }

@@ -1,9 +1,10 @@
-﻿namespace Eum.Shared.Common.Bases;
+﻿using Module = Autofac.Module;
 
-public abstract class EumModuleBase : Autofac.Module
+namespace Eum.Shared.Common.Bases;
+
+public abstract class EumModuleBase : Module
 {
     public static void SetSubscriber<TEventSubscriber>(TEventSubscriber subscriber)
     {
-        
     }
 }

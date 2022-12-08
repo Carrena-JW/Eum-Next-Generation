@@ -1,3 +1,4 @@
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
@@ -13,18 +14,20 @@ try
             {
                 builder.AddInMemoryEventBus(subscriber =>
                 {
+                    //모듈별 EventBus subscribe
+                    new EumCommonModule().SetSubscriber((subscriber));
                     new EumBoardModule().SetSubscriber(subscriber);
                     // EumBoardModule.SetAction(subscriber);
-                    //모듈별 EventBus subscribe
-                    // subscriber.Subscribe<IBoardEvent,RouteBoardEventHandler>();
+                    // subscriber.Subscribe<IBoardModuleEvent,RouteBoardEventHandler>();
                 });
             });
         })
         .EumWebApplicationBuilder()
         .AddEumModule(container =>
         {
+            container.RegisterModule(new EumCommonModule());
             container.RegisterModule(new EumBoardModule());
-            container.RegisterModule(new EumFeelanetModule());
+            // container.RegisterModule(new EumFeelanetModule());
         })
         .Build()
         .EumWebApplication()

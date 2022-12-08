@@ -1,8 +1,6 @@
-﻿
+﻿namespace Eum.EventBus.Core.InMemory;
 
-namespace Eum.EventBus.Core.InMemory;
-
-class InMemoryEventBusSubscriber : IEventBusSubscriber
+internal class InMemoryEventBusSubscriber : IEventBusSubscriber
 {
     private readonly IServiceCollection _services;
 
@@ -22,16 +20,13 @@ class InMemoryEventBusSubscriber : IEventBusSubscriber
     public IEventBusSubscriber SubscribeAllHandledEvents<TEventHandler>()
         where TEventHandler : class
     {
-        Type implementationType = typeof(TEventHandler);
-        IEnumerable<Type> serviceTypes = implementationType
+        var implementationType = typeof(TEventHandler);
+        var serviceTypes = implementationType
             .GetInterfaces()
             .Where(i => i.IsGenericType)
             .Where(i => i.GetGenericTypeDefinition() == typeof(IEventHandler<>));
 
-        foreach (Type serviceType in serviceTypes)
-        {
-            _services.AddScoped(serviceType, implementationType);
-        }
+        foreach (var serviceType in serviceTypes) _services.AddScoped(serviceType, implementationType);
 
         return this;
     }

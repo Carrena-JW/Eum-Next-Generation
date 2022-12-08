@@ -1,31 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Interface\" />
-    <None Remove="Interfaces\Repositoires\" />
-    <None Remove="Interfaces\Entities\" />
-    <None Remove="Entities\" />
-    <None Remove="DTO\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models\Entities\" />
-    <Folder Include="NewFolder\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
-    <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="GlobalUsings.cs">
-      <DependentUpon>GlobalUsings.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="Interface\"/>
+        <None Remove="Interfaces\Repositoires\"/>
+        <None Remove="Interfaces\Entities\"/>
+        <None Remove="Entities\"/>
+        <None Remove="DTO\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Models\Entities\"/>
+        <Folder Include="NewFolder\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj"/>
+        <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Update="GlobalUsings.cs">
+            <DependentUpon>GlobalUsings.tt</DependentUpon>
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+        </Compile>
+    </ItemGroup>
 </Project>

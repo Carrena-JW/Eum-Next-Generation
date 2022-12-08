@@ -5,12 +5,16 @@ namespace Eum.Shared.Common.Bases;
 public class RepositoryBase : DatabaseRepositoryBase
 {
     //WRITE REPOSITORY
-    public RepositoryBase(string conStr) : base(conStr) { }
+    public RepositoryBase(string conStr) : base(conStr)
+    {
+    }
+
     protected string CreateQuerySet(QueryCommandType qt, string tableName, object payload = null, int? id = null)
     {
         var sb = new StringBuilder();
-        var hasValuePropertyNames = payload.GetType().GetProperties().AsEnumerable().Where(p => p.GetValue(payload) != null).Select(p => p.Name);
-        
+        var hasValuePropertyNames = payload.GetType().GetProperties().AsEnumerable()
+            .Where(p => p.GetValue(payload) != null).Select(p => p.Name);
+
         var firstPropName = hasValuePropertyNames.FirstOrDefault();
         var lastPropName = hasValuePropertyNames.Last();
 
@@ -19,19 +23,15 @@ public class RepositoryBase : DatabaseRepositoryBase
             case QueryCommandType.Create:
                 sb.AppendLine($"INSERT INTO [{tableName}](");
                 //column
-                foreach(var p in hasValuePropertyNames)
-                {
+                foreach (var p in hasValuePropertyNames)
                     sb.AppendLine($"[{p}]{(lastPropName != p ? "," : string.Empty)}");
-                }
 
                 sb.AppendLine(")");
                 sb.AppendLine("OUTPUT INSERTED.Id"); //output ID
                 sb.AppendLine("VALUES(");
                 //input value
                 foreach (var p in hasValuePropertyNames)
-                {
                     sb.AppendLine($"@{p}{(lastPropName != p ? "," : string.Empty)}");
-                }
 
                 sb.AppendLine(")");
                 break;
@@ -42,27 +42,18 @@ public class RepositoryBase : DatabaseRepositoryBase
                 //업데이트에서는 id 는 제외 한다
                 hasValuePropertyNames = hasValuePropertyNames.Where(r => r.ToLowerInvariant() != "id");
 
-                if(firstPropName.ToLowerInvariant() == "id")
-                {
-                    firstPropName = hasValuePropertyNames.FirstOrDefault();
-                }
+                if (firstPropName.ToLowerInvariant() == "id") firstPropName = hasValuePropertyNames.FirstOrDefault();
 
                 foreach (var p in hasValuePropertyNames)
-                {
-                   sb.AppendLine($"{(firstPropName != p ? string.Empty:"SET")} [{p}] = @{p}{((lastPropName != p ? "," : string.Empty))}");
-                }
+                    sb.AppendLine(
+                        $"{(firstPropName != p ? string.Empty : "SET")} [{p}] = @{p}{(lastPropName != p ? "," : string.Empty)}");
                 break;
             case QueryCommandType.Delete:
                 sb.AppendLine($"DELETE FROM [{tableName}]");
                 break;
-            default:
-                break;
         }
 
-        if (id.HasValue && qt != QueryCommandType.Create)
-        {
-            sb.AppendLine("WHERE [id] = @id");
-        }
+        if (id.HasValue && qt != QueryCommandType.Create) sb.AppendLine("WHERE [id] = @id");
 
         return sb.ToString();
     }

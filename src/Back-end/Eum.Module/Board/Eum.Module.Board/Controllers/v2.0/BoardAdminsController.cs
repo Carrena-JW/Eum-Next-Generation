@@ -10,4 +10,3 @@ internal class BoardsAdminController : EumControllerBase
         return Ok("this is boardadmin controller v2.0");
     }
 }
-

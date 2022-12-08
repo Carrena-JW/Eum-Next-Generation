@@ -7,8 +7,8 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Eum.Module.Common.Core\Eum.Module.Common.Core.csproj" />
-      <ProjectReference Include="..\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj" />
+        <ProjectReference Include="..\Eum.Module.Common.Core\Eum.Module.Common.Core.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

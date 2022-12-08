@@ -5,6 +5,7 @@ public class ArticlesController : EumControllerBase
 {
     private readonly IArticleQueries _articleQueries;
     private readonly IMediator _mediator;
+
     public ArticlesController(IArticleQueries articleQueries, IMediator mediator)
     {
         _articleQueries = articleQueries;
@@ -50,5 +51,4 @@ public class ArticlesController : EumControllerBase
     {
         return Ok(await _mediator.Send(message));
     }
-
 }

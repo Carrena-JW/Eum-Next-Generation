@@ -4,7 +4,7 @@
 //** route 헬퍼
 //** create command 헬퍼
 // ** 타입찾는거 헬퍼
-public class RouteBoardEventHandler : IEventHandler<IBoardEvent>
+public class RouteBoardEventHandler : IEventHandler<IBoardModuleEvent>
 {
     private readonly IMemoryCache _cache;
 
@@ -13,7 +13,7 @@ public class RouteBoardEventHandler : IEventHandler<IBoardEvent>
         _cache = cache;
     }
 
-    public Task HandleEventAsync(IBoardEvent @event)
+    public Task HandleEventAsync(IBoardModuleEvent @event)
     {
         //if (!string.IsNullOrEmpty(@event))
         //{
@@ -23,7 +23,7 @@ public class RouteBoardEventHandler : IEventHandler<IBoardEvent>
 
         //여기서 분기 해야되네
 
-        if (_cache.TryGetValue<Guid>(@event.Id, out Guid guid))
+        if (_cache.TryGetValue(@event.Id, out Guid guid))
         {
             //Type 을찾고 대상 command  를 찾고
             //command 를 만들고
@@ -31,11 +31,8 @@ public class RouteBoardEventHandler : IEventHandler<IBoardEvent>
             //여기가 성공
             //    return Task.CompletedTask;
         }
-        else
-        {
-            //트렌잭션 실패 작업 스킵
-        }
 
+        //트렌잭션 실패 작업 스킵
         return Task.CompletedTask;
     }
 }

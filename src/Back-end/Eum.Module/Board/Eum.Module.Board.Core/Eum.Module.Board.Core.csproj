@@ -1,39 +1,39 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Interfaces\**" />
-    <EmbeddedResource Remove="Interfaces\**" />
-    <None Remove="Interfaces\**" />
-  </ItemGroup>
+    <ItemGroup>
+        <Compile Remove="Interfaces\**"/>
+        <EmbeddedResource Remove="Interfaces\**"/>
+        <None Remove="Interfaces\**"/>
+    </ItemGroup>
 
-  <ItemGroup>
-    <None Remove="Handlers\" />
-    <None Remove="CommandHandlers\Commands\" />
-    <None Remove="CommandHandlers\Queries\" />
-    <None Remove="MediatR" />
-    <None Remove="MediatR.Extensions.Microsoft.DependencyInjection" />
-    <None Remove="Interfaces\" />
-    <None Remove="Mapper\" />
-    <None Remove="AutoMapper" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Update="GlobalUsings.cs">
-      <DependentUpon>GlobalUsings.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Events\Receive" />
-    <Folder Include="Events\Send" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="Handlers\"/>
+        <None Remove="CommandHandlers\Commands\"/>
+        <None Remove="CommandHandlers\Queries\"/>
+        <None Remove="MediatR"/>
+        <None Remove="MediatR.Extensions.Microsoft.DependencyInjection"/>
+        <None Remove="Interfaces\"/>
+        <None Remove="Mapper\"/>
+        <None Remove="AutoMapper"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Eum.Module.Board.Shared\Eum.Module.Board.Shared.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Compile Update="GlobalUsings.cs">
+            <DependentUpon>GlobalUsings.tt</DependentUpon>
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+        </Compile>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Events\Receive"/>
+        <Folder Include="Events\Send"/>
+    </ItemGroup>
 </Project>

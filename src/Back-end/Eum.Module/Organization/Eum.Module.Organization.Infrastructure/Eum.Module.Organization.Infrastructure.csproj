@@ -7,16 +7,16 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <Compile Update="GlobalUsings.cs">
-        <DependentUpon>GlobalUsings.tt</DependentUpon>
-        <DesignTime>True</DesignTime>
-        <AutoGen>True</AutoGen>
-      </Compile>
+        <Compile Update="GlobalUsings.cs">
+            <DependentUpon>GlobalUsings.tt</DependentUpon>
+            <DesignTime>True</DesignTime>
+            <AutoGen>True</AutoGen>
+        </Compile>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Eum.Module.Organization.Core\Eum.Module.Organization.Core.csproj" />
-      <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj" />
+        <ProjectReference Include="..\Eum.Module.Organization.Core\Eum.Module.Organization.Core.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj"/>
     </ItemGroup>
 
 </Project>

@@ -1,10 +1,9 @@
-﻿using Eum.Shared.Common.Interfaces;
-
-namespace Eum.Shared.Common.Extentions;
+﻿namespace Eum.Shared.Common.Extentions;
 
 public static class EumModuleAssembliesExtention
 {
     private static readonly string defaultModuleName = "Eum.Module.";
+
     public static Assembly[] GetEumModuleAssemblies(this AppDomain appDomain, string specificModuleName = null)
     {
         var assemblies = appDomain.GetAssemblies();
@@ -26,17 +25,19 @@ public static class EumModuleAssembliesExtention
         var referencedModules = AppDomain.CurrentDomain.GetEumModuleAssemblies(rootModuleName);
 
         container.RegisterAssemblyTypes(referencedModules)
-                 .AsClosedTypesOf(typeof(IRequestHandler<,>));
+            .AsClosedTypesOf(typeof(IRequestHandler<,>));
 
         container.Register<ServiceFactory>(context =>
         {
             var componentContext = context.Resolve<IComponentContext>();
-            return t => { object o; return componentContext.TryResolve(t, out o) ? o : null; };
+            return t =>
+            {
+                object o;
+                return componentContext.TryResolve(t, out o) ? o : null;
+            };
         });
 
 
         return container;
-
     }
 }
-

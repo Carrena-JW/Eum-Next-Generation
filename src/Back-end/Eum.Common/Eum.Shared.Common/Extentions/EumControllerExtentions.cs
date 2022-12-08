@@ -1,4 +1,5 @@
 ﻿namespace Eum.Shared.Common.Extentions;
+
 public static class EumControllerExtentions
 {
     public static IServiceCollection AddEumController(this IServiceCollection services)
@@ -7,7 +8,7 @@ public static class EumControllerExtentions
         {
             manager.FeatureProviders.Add(new ControllerProvier());
         });
-        
+
         return services;
     }
 }

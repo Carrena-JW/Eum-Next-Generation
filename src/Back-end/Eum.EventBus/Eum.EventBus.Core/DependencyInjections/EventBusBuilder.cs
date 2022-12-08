@@ -2,7 +2,7 @@
 
 public class EventBusBuilder : IEventBusBuilder
 {
-    private readonly EventPublisherRegister _register = new EventPublisherRegister();
+    private readonly EventPublisherRegister _register = new();
 
     public EventBusBuilder(IServiceCollection services)
     {

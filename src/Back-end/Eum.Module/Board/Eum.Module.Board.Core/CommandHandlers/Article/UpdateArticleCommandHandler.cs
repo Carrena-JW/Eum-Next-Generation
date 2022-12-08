@@ -1,26 +1,25 @@
-﻿using Microsoft.Extensions.Caching.Memory;
-
-namespace Eum.Module.Board.Core.CommandHandlers.Article;
+﻿namespace Eum.Module.Board.Core.CommandHandlers.Article;
 
 public class UpdateArticleCommandHandler : IRequestHandler<UpdateArticleCommand, bool>
 {
-    //private readonly TestDatabase _repository;
-    private readonly IArticleRepository<ArticleEntity> _repository;
-    private readonly IEventPublisher _eventPublisher;
     private readonly IMemoryCache _cache;
 
-    public UpdateArticleCommandHandler(IArticleRepository<ArticleEntity> repository, IEventPublisher eventPublisher, IMemoryCache cache)
-    //public UpdateArticleCommandHandler(IArticleRepository<ArticleEntity> repository)
+    private readonly IEventPublisher _eventPublisher;
+
+    //private readonly TestDatabase _repository;
+    private readonly IArticleRepository<ArticleEntity> _repository;
+
+    public UpdateArticleCommandHandler(IArticleRepository<ArticleEntity> repository, IEventPublisher eventPublisher,
+            IMemoryCache cache)
+        //public UpdateArticleCommandHandler(IArticleRepository<ArticleEntity> repository)
     {
         _repository = repository;
         _eventPublisher = eventPublisher;
         _cache = cache;
-
     }
 
     public async Task<bool> Handle(UpdateArticleCommand message, CancellationToken cancellationToken)
     {
-
         var transactionId = Guid.NewGuid();
         //validation 은 핸들러에서 처리한다.
         //using (var scope = new transactionscope)
@@ -41,7 +40,6 @@ public class UpdateArticleCommandHandler : IRequestHandler<UpdateArticleCommand,
         }
         catch (Exception ex)
         {
-
             _cache.Remove(transactionId); //실장 없어도 되네?
             throw;
         }
@@ -53,4 +51,3 @@ public class UpdateArticleCommandHandler : IRequestHandler<UpdateArticleCommand,
         return true;
     }
 }
-

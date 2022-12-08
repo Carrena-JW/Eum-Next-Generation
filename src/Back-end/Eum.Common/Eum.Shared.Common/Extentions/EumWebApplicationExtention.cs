@@ -1,30 +1,37 @@
-﻿using Autofac.Core;
+﻿namespace Eum.Shared.Common.Extentions;
 
-namespace Eum.Shared.Common.Extentions;
 public static class EumWebApplicationExtention
 {
-
     public static WebApplicationBuilder EumWebApplicationBuilder(this WebApplicationBuilder builder)
     {
         #region [Common settings]
+
         builder.Services.AddMemoryCache();
+
         #endregion
 
         #region [Api Versioning]
+
         builder.Services.AddEndpointsApiExplorer()
-                        .AddApiVersioning(EumMVCHelper.ConfigureApiVersoning)
-                        .AddVersionedApiExplorer(EumMVCHelper.ConfigureApiExplorer);
+            .AddApiVersioning(EumMVCHelper.ConfigureApiVersoning)
+            .AddVersionedApiExplorer(EumMVCHelper.ConfigureApiExplorer);
+
         #endregion
 
         #region [Swagger]
+
         builder.Services.AddSwaggerGen(EumSwaggerHelper.ConfigureSwaggerGen);
+
         #endregion
 
         #region [Add Eum Module Controller ]
+
         builder.Services.AddEumController();
+
         #endregion
 
         #region [Repository Dependency Injection : Using AutoFac]
+
         //각 모듈 하위로 이동
         //var eumAssemblies = AppDomain.CurrentDomain.GetEumModuleAssemblies();
         //builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(builder =>
@@ -37,16 +44,21 @@ public static class EumWebApplicationExtention
         //    .AsImplementedInterfaces()
         //    .InstancePerLifetimeScope();
         // });
+
         #endregion
 
         #region [Library Dependency Injection : AutoMapper, MediatR]
+
         //mapper 는 사용 보류(안해도 될 거같은데) 
         var eumAssemblies = AppDomain.CurrentDomain.GetEumModuleAssemblies();
         builder.Services.AddMediatR(eumAssemblies);
+
         #endregion
 
         #region [SeriLog]
+
         builder.Host.UseSerilog(EumSeriLogHelper.ConfigureEumLogger);
+
         #endregion
 
         return builder;
@@ -59,7 +71,9 @@ public static class EumWebApplicationExtention
 
 
         #region [ServiceProvider]
+
         Static.ServiceProvider = app.Services;
+
         #endregion
 
         #region [Appsettings]
@@ -71,47 +85,45 @@ public static class EumWebApplicationExtention
         #region [Swagger]
 
         if (isDevelment)
-        {
             app.UseSwagger(EumSwaggerHelper.ConfigureSwagger)
-               .UseSwaggerUI(EumSwaggerHelper.ConfigureSwaggerUI);
- 
-        }
+                .UseSwaggerUI(EumSwaggerHelper.ConfigureSwaggerUI);
 
         #endregion
 
         #region [Default Web Api]
-        app.UseStaticFiles()
-           .UseRouting()
-           .UseEndpoints(endpoints =>
-           {
-               //[Root path redirect]
-               if (isDevelment)
-               {
-                   endpoints.MapGet("/", async context =>
-                   {
-                       context.Response.Redirect("/swagger");
-                       await Task.CompletedTask;
-                   });
-               }
 
-               endpoints.MapControllers();
-           });
+        app.UseStaticFiles()
+            .UseRouting()
+            .UseEndpoints(endpoints =>
+            {
+                //[Root path redirect]
+                if (isDevelment)
+                    endpoints.MapGet("/", async context =>
+                    {
+                        context.Response.Redirect("/swagger");
+                        await Task.CompletedTask;
+                    });
+
+                endpoints.MapControllers();
+            });
+
         #endregion
 
         return app;
     }
 
 
-    public static WebApplicationBuilder AddEumModule(this WebApplicationBuilder builder, Action<ContainerBuilder> container)
+    public static WebApplicationBuilder AddEumModule(this WebApplicationBuilder builder,
+        Action<ContainerBuilder> container)
     {
-        builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer<ContainerBuilder>(container);
+        builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory()).ConfigureContainer(container);
         return builder;
     }
 
-    public static WebApplicationBuilder AddEumEventBus(this WebApplicationBuilder builder, Action<IServiceCollection> setAction)
+    public static WebApplicationBuilder AddEumEventBus(this WebApplicationBuilder builder,
+        Action<IServiceCollection> setAction)
     {
         setAction(builder.Services);
         return builder;
     }
 }
-

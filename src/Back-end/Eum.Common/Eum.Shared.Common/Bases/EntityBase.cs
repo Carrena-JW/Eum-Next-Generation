@@ -2,9 +2,9 @@
 
 public abstract class EntityBase
 {
-	private List<INotification> _entityEvents;
-    public IReadOnlyCollection<INotification> DomainEvents => _entityEvents ?.AsReadOnly();
-	 
+    private List<INotification> _entityEvents;
+    public IReadOnlyCollection<INotification> DomainEvents => _entityEvents?.AsReadOnly();
+
 
     public void AddDomainEvent(INotification eventItem)
     {
@@ -22,4 +22,3 @@ public abstract class EntityBase
         _entityEvents?.Clear();
     }
 }
-

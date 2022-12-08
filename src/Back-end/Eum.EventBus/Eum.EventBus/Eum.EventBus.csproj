@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>disable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Eum.EventBus.Abstractions\Eum.EventBus.Abstractions.csproj" />
-    <ProjectReference Include="..\Eum.EventBus.Core\Eum.EventBus.Core.csproj" />
-  </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Eum.EventBus.Abstractions\Eum.EventBus.Abstractions.csproj"/>
+        <ProjectReference Include="..\Eum.EventBus.Core\Eum.EventBus.Core.csproj"/>
+    </ItemGroup>
 
 </Project>

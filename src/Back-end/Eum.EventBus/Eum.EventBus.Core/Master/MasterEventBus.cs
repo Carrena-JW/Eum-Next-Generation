@@ -13,9 +13,6 @@ public class MasterEventBus : IEventPublisher
 
     public async Task PublishEventAsync<TEvent>(TEvent @event)
     {
-        foreach (IEventPublisher publisher in _eventPublishers.GetEventPublishers())
-        {
-            await publisher.PublishEventAsync(@event);
-        }
+        foreach (var publisher in _eventPublishers.GetEventPublishers()) await publisher.PublishEventAsync(@event);
     }
 }

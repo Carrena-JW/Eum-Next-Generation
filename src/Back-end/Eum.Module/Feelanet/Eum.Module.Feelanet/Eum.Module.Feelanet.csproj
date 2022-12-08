@@ -1,25 +1,25 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Remove="Controllers\" />
-    <None Remove="Microsoft.AspNetCore.Mvc" />
-    <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj" />
-    <ProjectReference Include="..\Eum.Module.Feelanet.Infrastructure\Eum.Module.Feelanet.Infrastructure.csproj" />
-  </ItemGroup>
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0" />
-    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Remove="Controllers\"/>
+        <None Remove="Microsoft.AspNetCore.Mvc"/>
+        <None Remove="Microsoft.AspNetCore.Mvc.Versioning"/>
+    </ItemGroup>
+    <ItemGroup>
+        <Folder Include="Controllers\"/>
+    </ItemGroup>
+    <ItemGroup>
+        <ProjectReference Include="..\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Feelanet.Infrastructure\Eum.Module.Feelanet.Infrastructure.csproj"/>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="2.2.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0"/>
+    </ItemGroup>
 </Project>

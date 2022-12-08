@@ -2,7 +2,7 @@
 
 public class EventPublisherRegister
 {
-    private readonly HashSet<Type> _types = new HashSet<Type>();
+    private readonly HashSet<Type> _types = new();
 
     public IEnumerable<Type> Types => _types.ToList().AsReadOnly();
 
@@ -12,4 +12,3 @@ public class EventPublisherRegister
         _types.Add(typeof(TEventPublisher));
     }
 }
-
