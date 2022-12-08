@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Eum.Module.Feelanet.Core\Eum.Module.Feelanet.Core.csproj" />
+  </ItemGroup>
+
 </Project>

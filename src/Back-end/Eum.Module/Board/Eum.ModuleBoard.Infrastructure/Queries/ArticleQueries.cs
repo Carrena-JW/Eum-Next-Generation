@@ -1,8 +1,4 @@
-﻿using Eum.Module.Board.Shared.Models.RequestModels;
-using System.Dynamic;
-using System.Text.Json.Serialization;
-
-namespace Eum.Module.Board.Infrastructure.Queries;
+﻿namespace Eum.Module.Board.Infrastructure.Queries;
 
 public class ArticleQueries : QueryBase, IArticleQueries
 {
@@ -51,10 +47,10 @@ WHERE [id] = @id
         };
 
         var paginatedData = articles.Where(r => r.Subject.ToLowerInvariant().Contains(parameter.Keyword))
-                                    .Select(contentsSelector)
-                                    .OrderBy(r => r.Subject)
-                                    .Skip(parameter.PageSize.Value * parameter.PageIndex.Value)
-                                    .Take(parameter.PageSize.Value);
+                                                .Select(contentsSelector)
+                                                .OrderBy(r => r.Subject)
+                                                .Skip(parameter.PageSize.Value * parameter.PageIndex.Value)
+                                                .Take(parameter.PageSize.Value);
 
         var instance = (PaginatedViewModel<T>)Activator.CreateInstance(typeof(PaginatedViewModel<T>), parameter.PageIndex.Value, parameter.PageSize.Value, totalCount, paginatedData);
 
