@@ -15,8 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus.Abstractions\Eum.EventBus.Abstractions.csproj"/>
-        <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj" />
     </ItemGroup>
 
 </Project>

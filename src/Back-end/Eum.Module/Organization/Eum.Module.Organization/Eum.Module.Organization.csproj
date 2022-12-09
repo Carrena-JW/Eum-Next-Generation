@@ -15,15 +15,13 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus.Abstractions\Eum.EventBus.Abstractions.csproj"/>
-        <ProjectReference Include="..\..\Board\Eum.Module.Board.Core\Eum.Module.Board.Core.csproj"/>
-        <ProjectReference Include="..\Eum.Module.Organization.Core\Eum.Module.Organization.Core.csproj"/>
-        <ProjectReference Include="..\Eum.Module.Organization.Infrastructure\Eum.Module.Organization.Infrastructure.csproj"/>
-        <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Organization.Core\Eum.Module.Organization.Core.csproj" />
+        <ProjectReference Include="..\Eum.Module.Organization.Infrastructure\Eum.Module.Organization.Infrastructure.csproj" />
+        <ProjectReference Include="..\Eum.Module.Organization.Shared\Eum.Module.Organization.Shared.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <Folder Include="Controllers\v2.0"/>
+        <Folder Include="Controllers\v2.0" />
     </ItemGroup>
 
 </Project>

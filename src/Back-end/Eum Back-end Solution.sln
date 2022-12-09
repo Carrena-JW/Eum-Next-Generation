@@ -71,6 +71,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Common.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Common.Shared", "Eum.Module\Common\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj", "{6DD4AFD0-5C18-4CFC-8A3B-9EA767B1E0FB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Template", "Template", "{8F3C26BE-D235-4430-A1FA-8A5AA35D0E56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -198,6 +200,7 @@ Global
 		{2553068F-9552-49F8-BA86-7A61042FDD3C} = {30FFE491-99B4-4E89-9278-BCF0C1A5616E}
 		{BE26CA22-E7BB-4B13-B8F0-28FB66181582} = {30FFE491-99B4-4E89-9278-BCF0C1A5616E}
 		{6DD4AFD0-5C18-4CFC-8A3B-9EA767B1E0FB} = {30FFE491-99B4-4E89-9278-BCF0C1A5616E}
+		{8F3C26BE-D235-4430-A1FA-8A5AA35D0E56} = {A70AE28D-6EE5-411D-96EC-9000D945FA48}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F7E4409-6E24-433E-AFEB-941FC51B76A2}
