@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json.schemastore.org/template",
+    "author": "Carrena",
+    "classifications": [ "Common", "Library" ],
+    "identity": "Eum.Module.Template.Core",
+    "name": "Eum solution module core project template.",
+    "shortName": "eummodule",
+    "sourceName": "Template",
+    "tags": {
+        "language": "C#",
+        "type": "project"
+    },
+    "preferNameDirectory" : true
+  }
