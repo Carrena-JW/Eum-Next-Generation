@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Eum.Module.EumTemplate.Core</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Eum.Module.EumTemplate.Shared\Eum.Module.EumTemplate.Shared.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="EventHandlers" />
+      <Folder Include="Events" />
+    </ItemGroup>
+
+</Project>
