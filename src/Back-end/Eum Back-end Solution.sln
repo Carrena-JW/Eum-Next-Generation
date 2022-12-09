@@ -71,8 +71,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Common.Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Common.Shared", "Eum.Module\Common\Eum.Module.Common.Shared\Eum.Module.Common.Shared.csproj", "{6DD4AFD0-5C18-4CFC-8A3B-9EA767B1E0FB}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Eum.Module.Template", "05. Eum.Module.Template", "{8F3C26BE-D235-4430-A1FA-8A5AA35D0E56}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Shared", "Eum.Module\Workflows\Eum.Module.Workflows.Shared\Eum.Module.Workflows.Shared.csproj", "{39112C67-5FAE-40B2-81A2-890BB3CD02CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows", "Eum.Module\Workflows\Eum.Module.Workflows\Eum.Module.Workflows.csproj", "{027E5CE2-1410-4185-8154-F5FC3A307ECB}"
@@ -90,6 +88,16 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar.Shared", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar.Shared\Eum.Module.Calendar.Shared.csproj", "{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar.Core", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar.Core\Eum.Module.Calendar.Core.csproj", "{9F247C62-6971-4ABB-ABC2-BB169142D803}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TemplatePackages", "TemplatePackages", "{12381236-CF98-4F9A-9457-412722CFAC55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.EumTemplate", "Eum.Module\TemplatePackges\Eum.Module.EumTemplate\Eum.Module.EumTemplate.csproj", "{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.EumTemplate.Shared", "Eum.Module\TemplatePackges\Eum.Module.EumTemplate.Shared\Eum.Module.EumTemplate.Shared.csproj", "{32F784F7-27EA-4695-A102-EEDEAF6ED6EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.EumTemplate.Infrastructure", "Eum.Module\TemplatePackges\Eum.Module.EumTemplate.Infrastructure\Eum.Module.EumTemplate.Infrastructure.csproj", "{55F764AB-E724-43A5-8CC2-5D0A7700E978}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.EumTemplate.Core", "Eum.Module.Templates\Eum.Module.EumTemplate.Core\Eum.Module.EumTemplate.Core.csproj", "{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -217,6 +225,22 @@ Global
 		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F784F7-27EA-4695-A102-EEDEAF6ED6EE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F784F7-27EA-4695-A102-EEDEAF6ED6EE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F784F7-27EA-4695-A102-EEDEAF6ED6EE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F784F7-27EA-4695-A102-EEDEAF6ED6EE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55F764AB-E724-43A5-8CC2-5D0A7700E978}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55F764AB-E724-43A5-8CC2-5D0A7700E978}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55F764AB-E724-43A5-8CC2-5D0A7700E978}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55F764AB-E724-43A5-8CC2-5D0A7700E978}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -259,6 +283,11 @@ Global
 		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069} = {0614053B-4107-489A-85F0-92A6F845F45F}
 		{9F247C62-6971-4ABB-ABC2-BB169142D803} = {0614053B-4107-489A-85F0-92A6F845F45F}
 		{021FABC1-C5D0-4252-B2A7-AA03D5B1BB7C} = {E45F0D16-72ED-4F35-A51A-C4A8FEF9A11F}
+		{12381236-CF98-4F9A-9457-412722CFAC55} = {A70AE28D-6EE5-411D-96EC-9000D945FA48}
+		{FA7C5A6F-F35E-4858-BD2F-7E9943A0BAA6} = {12381236-CF98-4F9A-9457-412722CFAC55}
+		{32F784F7-27EA-4695-A102-EEDEAF6ED6EE} = {12381236-CF98-4F9A-9457-412722CFAC55}
+		{55F764AB-E724-43A5-8CC2-5D0A7700E978} = {12381236-CF98-4F9A-9457-412722CFAC55}
+		{6E4FCD1F-4599-4B43-BD7C-C8A47C186FED} = {12381236-CF98-4F9A-9457-412722CFAC55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F7E4409-6E24-433E-AFEB-941FC51B76A2}
