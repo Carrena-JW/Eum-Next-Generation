@@ -1,5 +1,4 @@
-﻿using Eum.Shared.Common.Models.CommonRequestModels;
-
+﻿
 namespace Eum.Module.Board.Shared.Models.RequestModels;
 
 public class ArticlePaginatedRequest : PaginatedRequestModels
