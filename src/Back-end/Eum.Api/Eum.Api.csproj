@@ -7,20 +7,20 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj"/>
-        <ProjectReference Include="..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj"/>
-        <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj"/>
-        <ProjectReference Include="..\Eum.Module\Common\Eum.Module.Common\Eum.Module.Common.csproj"/>
-        <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj"/>
-        <ProjectReference Include="..\Eum.Module\Organization\Eum.Module.Organization\Eum.Module.Organization.csproj"/>
+        <ProjectReference Include="..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
+        <ProjectReference Include="..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
+        <ProjectReference Include="..\Eum.Module\Board\Eum.Module.Board\Eum.Module.Board.csproj" />
+        <ProjectReference Include="..\Eum.Module\Common\Eum.Module.Common\Eum.Module.Common.csproj" />
+        <ProjectReference Include="..\Eum.Module\Feelanet\Eum.Module.Feelanet\Eum.Module.Feelanet.csproj" />
+        <ProjectReference Include="..\Eum.Module\Organization\Eum.Module.Organization\Eum.Module.Organization.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Remove="Microsoft.AspNetCore.Mvc.Versioning"/>
+        <None Remove="Microsoft.AspNetCore.Mvc.Versioning" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1"/>
+        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
     </ItemGroup>
 
     <ItemGroup>

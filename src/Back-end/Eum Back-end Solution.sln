@@ -37,7 +37,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Module.Board.Shared", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Eum.Shared.Common", "Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj", "{A1D816B3-B359-460A-877F-F5D04E7970D3}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Test", "05. Test", "{D4DBEAA9-18E5-49D1-9EBB-993A428EDDB9}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "06. Test", "06. Test", "{D4DBEAA9-18E5-49D1-9EBB-993A428EDDB9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject1", "..\Test\TestProject1\TestProject1.csproj", "{8C465D22-7DE4-4BF2-8556-952B76E5BA39}"
 EndProject
@@ -73,13 +73,23 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Common.Shared", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "05. Eum.Module.Template", "05. Eum.Module.Template", "{8F3C26BE-D235-4430-A1FA-8A5AA35D0E56}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Shared", "Eum.Module\Eum.Module.Workflows\Eum.Module.Workflows.Shared\Eum.Module.Workflows.Shared.csproj", "{39112C67-5FAE-40B2-81A2-890BB3CD02CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Shared", "Eum.Module\Workflows\Eum.Module.Workflows.Shared\Eum.Module.Workflows.Shared.csproj", "{39112C67-5FAE-40B2-81A2-890BB3CD02CB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows", "Eum.Module\Eum.Module.Workflows\Eum.Module.Workflows\Eum.Module.Workflows.csproj", "{027E5CE2-1410-4185-8154-F5FC3A307ECB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows", "Eum.Module\Workflows\Eum.Module.Workflows\Eum.Module.Workflows.csproj", "{027E5CE2-1410-4185-8154-F5FC3A307ECB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Infrastructure", "Eum.Module\Eum.Module.Workflows\Eum.Module.Workflows.Infrastructure\Eum.Module.Workflows.Infrastructure.csproj", "{3AEFFA72-5A5A-4F1C-94B9-C068CB2884FE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Infrastructure", "Eum.Module\Workflows\Eum.Module.Workflows.Infrastructure\Eum.Module.Workflows.Infrastructure.csproj", "{3AEFFA72-5A5A-4F1C-94B9-C068CB2884FE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Core", "Eum.Module\Eum.Module.Workflows\Eum.Module.Workflows.Core\Eum.Module.Workflows.Core.csproj", "{15838B5F-0743-494B-9114-415AE54A13AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Workflows.Core", "Eum.Module\Workflows\Eum.Module.Workflows.Core\Eum.Module.Workflows.Core.csproj", "{15838B5F-0743-494B-9114-415AE54A13AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar", "Calendar", "{0614053B-4107-489A-85F0-92A6F845F45F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar\Eum.Module.Calendar.csproj", "{E2D15E74-C41D-4B79-9B08-C75425439CF9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar.Infrastructure", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar.Infrastructure\Eum.Module.Calendar.Infrastructure.csproj", "{8620E173-2454-4539-A677-29D127A00C56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar.Shared", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar.Shared\Eum.Module.Calendar.Shared.csproj", "{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eum.Module.Calendar.Core", "Eum.Module\Calendar\Eum.Module.Calendar\Eum.Module.Calendar.Core\Eum.Module.Calendar.Core.csproj", "{9F247C62-6971-4ABB-ABC2-BB169142D803}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -191,6 +201,22 @@ Global
 		{15838B5F-0743-494B-9114-415AE54A13AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{15838B5F-0743-494B-9114-415AE54A13AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{15838B5F-0743-494B-9114-415AE54A13AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2D15E74-C41D-4B79-9B08-C75425439CF9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2D15E74-C41D-4B79-9B08-C75425439CF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2D15E74-C41D-4B79-9B08-C75425439CF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2D15E74-C41D-4B79-9B08-C75425439CF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8620E173-2454-4539-A677-29D127A00C56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8620E173-2454-4539-A677-29D127A00C56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8620E173-2454-4539-A677-29D127A00C56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8620E173-2454-4539-A677-29D127A00C56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F247C62-6971-4ABB-ABC2-BB169142D803}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -218,7 +244,6 @@ Global
 		{1A17B7E9-726F-4C2D-9157-BBE010EC44F9} = {74ECDDAC-EB20-4058-85DA-CFAA29AA39B2}
 		{44229961-460D-4870-9E5F-237F116B092B} = {74ECDDAC-EB20-4058-85DA-CFAA29AA39B2}
 		{93AFE19E-2576-4EF6-A1E5-36E6961EDC1C} = {DD15EA62-42E2-4BFD-ADAA-1D3CDBA4C5A0}
-		{021FABC1-C5D0-4252-B2A7-AA03D5B1BB7C} = {E45F0D16-72ED-4F35-A51A-C4A8FEF9A11F}
 		{30FFE491-99B4-4E89-9278-BCF0C1A5616E} = {A70AE28D-6EE5-411D-96EC-9000D945FA48}
 		{6D785C8D-4E2C-492C-9A2F-3450534A7350} = {30FFE491-99B4-4E89-9278-BCF0C1A5616E}
 		{2553068F-9552-49F8-BA86-7A61042FDD3C} = {30FFE491-99B4-4E89-9278-BCF0C1A5616E}
@@ -228,6 +253,12 @@ Global
 		{027E5CE2-1410-4185-8154-F5FC3A307ECB} = {C59855EE-2A90-4789-930B-39C7F4496555}
 		{3AEFFA72-5A5A-4F1C-94B9-C068CB2884FE} = {C59855EE-2A90-4789-930B-39C7F4496555}
 		{15838B5F-0743-494B-9114-415AE54A13AF} = {C59855EE-2A90-4789-930B-39C7F4496555}
+		{0614053B-4107-489A-85F0-92A6F845F45F} = {A70AE28D-6EE5-411D-96EC-9000D945FA48}
+		{E2D15E74-C41D-4B79-9B08-C75425439CF9} = {0614053B-4107-489A-85F0-92A6F845F45F}
+		{8620E173-2454-4539-A677-29D127A00C56} = {0614053B-4107-489A-85F0-92A6F845F45F}
+		{B8FA4A4D-CB95-4A77-A09D-3C45B183F069} = {0614053B-4107-489A-85F0-92A6F845F45F}
+		{9F247C62-6971-4ABB-ABC2-BB169142D803} = {0614053B-4107-489A-85F0-92A6F845F45F}
+		{021FABC1-C5D0-4252-B2A7-AA03D5B1BB7C} = {E45F0D16-72ED-4F35-A51A-C4A8FEF9A11F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {4F7E4409-6E24-433E-AFEB-941FC51B76A2}
