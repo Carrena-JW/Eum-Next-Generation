@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>Eum.Module.Workflows.Infrastructure</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\Eum.Module.Workflows.Core\Eum.Module.Workflows.Core.csproj"/>
+        <ProjectReference Include="..\Eum.Module.Workflows.Shared\Eum.Module.Workflows.Shared.csproj"/>
+    </ItemGroup>
+
+</Project>
