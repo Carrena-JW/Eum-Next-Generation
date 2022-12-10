@@ -1,13 +1,14 @@
 ﻿
 namespace Eum.Module.EumTemplate;
 
-public class EumEumTemplateModule : Autofac.Module, IModuleSubscriber
+//if you implement EventBus, you have to add interface as IModuleSubscriber
+public class EumEumTemplateModule : Autofac.Module
 {
-    public void SetSubscriber(IEventBusSubscriber subscriber)
-    {
-        //이벤트와 이벤트 핸들러 구현 후 적용 
-        //subscriber.Subscribe<IBoardModuleEvent, RouteBoardEventHandler>();
-    }
+    //public void SetSubscriber(IEventBusSubscriber subscriber)
+    //{
+    //    //이벤트와 이벤트 핸들러 구현 후 적용 
+    //    //subscriber.Subscribe<IBoardModuleEvent, RouteBoardEventHandler>();
+    //}
 
     protected override void Load(ContainerBuilder builder)
     {
