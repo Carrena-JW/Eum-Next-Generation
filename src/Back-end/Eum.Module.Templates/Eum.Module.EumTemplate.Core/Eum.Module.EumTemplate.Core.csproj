@@ -8,12 +8,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Eum.Module.EumTemplate.Shared\Eum.Module.EumTemplate.Shared.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <Folder Include="EventHandlers" />
       <Folder Include="Events" />
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\Eum.Module\TemplatePackges\Eum.Module.EumTemplate.Shared\Eum.Module.EumTemplate.Shared.csproj" />
+    </ItemGroup>
 </Project>

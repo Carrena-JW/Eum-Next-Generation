@@ -8,9 +8,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Eum.Module.EumTemplate.Core\Eum.Module.EumTemplate.Core.csproj" />
       <ProjectReference Include="..\Eum.Module.EumTemplate.Infrastructure\Eum.Module.EumTemplate.Infrastructure.csproj" />
       <ProjectReference Include="..\Eum.Module.EumTemplate.Shared\Eum.Module.EumTemplate.Shared.csproj" />
+      <ProjectReference Include="..\..\..\Eum.Module.Templates\Eum.Module.EumTemplate.Core\Eum.Module.EumTemplate.Core.csproj" />
     </ItemGroup>
 
 </Project>

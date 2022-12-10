@@ -9,7 +9,5 @@
 
     <ItemGroup>
       <ProjectReference Include="..\..\..\Eum.Common\Eum.Shared.Common\Eum.Shared.Common.csproj" />
-      <ProjectReference Include="..\..\..\Eum.EventBus\Eum.EventBus\Eum.EventBus.csproj" />
     </ItemGroup>
-
 </Project>
