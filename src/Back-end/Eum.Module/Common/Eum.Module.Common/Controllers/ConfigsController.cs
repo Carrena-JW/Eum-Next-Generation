@@ -1,5 +1,8 @@
 ﻿
 
+using Eum.Module.Common.Shared.Interfaces;
+using MediatR;
+
 namespace Eum.Module.Common.Controllers;
 
 public class ConfigsController : EumControllerBase
