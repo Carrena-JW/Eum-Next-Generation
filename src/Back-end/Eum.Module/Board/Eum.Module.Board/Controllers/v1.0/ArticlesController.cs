@@ -37,7 +37,6 @@ public class ArticlesController : EumControllerBase
     [HttpPost]
     public async Task<IActionResult> CreateArticle([FromBody] CreateArticleCommand message)
     {
-        
         return Ok(await _mediator.Send(message));
     }
 

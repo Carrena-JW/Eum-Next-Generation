@@ -13,7 +13,7 @@ public class ArticleQueries : QueryBase, IArticleQueries
         connection.Open();
 
         var query =
-            @"
+@"
 SELECT * FROM [vw_article]
 ";
 
@@ -27,7 +27,7 @@ SELECT * FROM [vw_article]
 
 
         var query =
-            @"
+@"
 SELECT * FROM [vw_article]
 WHERE [id] = @id
 ";

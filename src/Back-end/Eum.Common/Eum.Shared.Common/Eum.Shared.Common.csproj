@@ -7,29 +7,29 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <None Remove="Helpers\"/>
-        <None Remove="Extentions\"/>
-        <None Remove="Bases\"/>
-        <None Remove="Interfaces\"/>
-        <None Remove="Microsoft.Extensions.DependencyInjection"/>
-        <None Remove="Controllers\"/>
+        <None Remove="Helpers\" />
+        <None Remove="Extentions\" />
+        <None Remove="Bases\" />
+        <None Remove="Interfaces\" />
+        <None Remove="Microsoft.Extensions.DependencyInjection" />
+        <None Remove="Controllers\" />
     </ItemGroup>
     <ItemGroup>
-        <Folder Include="Controllers\"/>
+        <Folder Include="Controllers\" />
     </ItemGroup>
     <ItemGroup>
-        <PackageReference Include="Autofac" Version="6.5.0"/>
-        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0"/>
-        <PackageReference Include="AutoMapper" Version="12.0.0"/>
-        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0"/>
-        <PackageReference Include="Dapper" Version="2.0.123"/>
-        <PackageReference Include="MediatR" Version="11.1.0"/>
-        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0"/>
-        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0"/>
-        <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1"/>
-        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1"/>
-        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0"/>
+        <PackageReference Include="Autofac" Version="6.5.0" />
+        <PackageReference Include="Autofac.Extensions.DependencyInjection" Version="8.0.0" />
+        <PackageReference Include="AutoMapper" Version="12.0.0" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+        <PackageReference Include="Dapper" Version="2.0.123" />
+        <PackageReference Include="MediatR" Version="11.1.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.ApiExplorer" Version="2.2.0" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer" Version="5.0.0" />
+        <PackageReference Include="Microsoft.Data.SqlClient" Version="5.0.1" />
+        <PackageReference Include="Serilog.AspNetCore" Version="6.0.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     </ItemGroup>
     <ItemGroup>
         <None Update="GlobalUsings.tt">
@@ -38,7 +38,7 @@
         </None>
     </ItemGroup>
     <ItemGroup>
-        <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}"/>
+        <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
     </ItemGroup>
     <ItemGroup>
         <Compile Update="GlobalUsings.cs">

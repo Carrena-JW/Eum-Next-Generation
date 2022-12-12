@@ -3,7 +3,9 @@
 public class QueryBase : DatabaseRepositoryBase
 {
     //READ REPOSITORY
-    public QueryBase(string conStr) : base(conStr)
+    public QueryBase(string conStr = null) : base(conStr)
     {
     }
+    
+    
 }

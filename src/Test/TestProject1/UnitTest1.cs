@@ -11,14 +11,30 @@ public class UnitTest1
     [TestMethod]
     public async Task TestMethod1()
     {
+       this.setConfiguration();
+
+        var queries = new ArticleQueries();
+        var rseult = await queries.GetArticleById<AritlceQueryViewModel>(12);
+    }
+
+    [TestMethod]
+    public async Task SysmConfigTest()
+    {
+        this.setConfiguration();
+        
+        var queries = new ArticleQueries();
+        var rseult = await queries.GetArticleById<AritlceQueryViewModel>(12);
+        
+        
+     }
+
+    private void setConfiguration()
+    {
         Static.Configuration = new ConfigurationBuilder()
             .AddJsonFile(
                 @"D:\01.Repository\Eum_Architecture\Eum-New-Generation\src\Back-end\Eum.Api\appsettings.Development.json")
             .AddEnvironmentVariables()
             .Build();
-
-        var queries = new ArticleQueries();
-        var rseult = await queries.GetArticleById<AritlceQueryViewModel>(12);
     }
 }
 
