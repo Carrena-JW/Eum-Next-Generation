@@ -1,4 +1,7 @@
 // mark
+
+using Eum.Module.Organization;
+
 Log.Logger = new LoggerConfiguration()
     .WriteTo.Console()
     .CreateBootstrapLogger();
@@ -27,6 +30,7 @@ try
         {
             container.RegisterModule(new EumCommonModule());
             container.RegisterModule(new EumBoardModule());
+            container.RegisterModule(new EumOrganizationModule());
             // container.RegisterModule(new EumFeelanetModule());
         })
         .Build()

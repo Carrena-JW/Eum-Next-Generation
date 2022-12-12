@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Eum.Module.Organization.Controllers.v1._0;
 
 [ApiVersion("1.0")]
+[ApiVersion("2.0")]
+[ApiVersion("3.0")]
 public class UsersController : EumControllerBase
 {
     private readonly IMediator _mediator;

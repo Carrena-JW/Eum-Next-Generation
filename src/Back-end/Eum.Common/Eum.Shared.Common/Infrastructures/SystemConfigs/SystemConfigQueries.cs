@@ -18,7 +18,7 @@ public class SystemConfigQueries : QueryBase, ISystemConfigQueries
 
         var query = 
 @"
-SELECT * FROM [EC_SYSTEM_CONFIG]
+SELECT * FROM [T_EC_SYSTEM_CONFIG]
 ";
         return await connection.QueryAsync<T>(query);
     }

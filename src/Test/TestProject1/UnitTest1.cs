@@ -1,6 +1,11 @@
+using Autofac;
 using Eum.Module.Board.Infrastructure.Queries;
 using Eum.Module.Board.Shared.Models.QueryViewModels;
+using Eum.Module.Organization.Controllers.v1._0;
 using Eum.Shared.Common;
+using Eum.Shared.Common.Extentions;
+using MediatR;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 
 namespace TestProject1;
@@ -35,6 +40,15 @@ public class UnitTest1
                 @"D:\01.Repository\Eum_Architecture\Eum-New-Generation\src\Back-end\Eum.Api\appsettings.Development.json")
             .AddEnvironmentVariables()
             .Build();
+    }
+
+    
+
+    [TestMethod]
+    public async Task TestController()
+    {
+        
+        
     }
 }
 

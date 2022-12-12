@@ -5,3 +5,6 @@
 // global using Eum.Shared.Common.Extentions;
 // global using Eum.Module.Organization.Core.EventHandlers;
 // global using Eum.EventBus.Abstractions;
+global using Eum.Shared.Common.Bases;
+global using MediatR;
+global using Microsoft.AspNetCore.Mvc;
