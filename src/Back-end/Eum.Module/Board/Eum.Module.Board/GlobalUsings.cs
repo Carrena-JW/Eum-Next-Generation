@@ -10,7 +10,7 @@ global using Eum.Module.Board.Shared.Interface.Repositoires;
 global using Eum.Module.Board.Shared.Models.QueryViewModels;
 global using Eum.Module.Board.Shared.Models.RequestModels;
 global using Eum.Shared.Common.Bases;
+global using Eum.Shared.Common.Events;
 global using Eum.Shared.Common.Extentions;
 global using MediatR;
 global using Microsoft.AspNetCore.Mvc;
-global using Eum.Shared.Common.Events;
