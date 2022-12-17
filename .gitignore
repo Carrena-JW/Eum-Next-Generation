@@ -201,7 +201,7 @@ PublishScripts/
 **/[Pp]ackages/*
 
 # except front-end packages 
-!**/eum-front-repo/packages
+#!**/eum-front-repo/packages
 
 # except build/, which is used as an MSBuild target.
 !**/[Pp]ackages/build/

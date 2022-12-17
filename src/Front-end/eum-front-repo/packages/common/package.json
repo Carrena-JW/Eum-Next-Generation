@@ -1,0 +1,11 @@
+{
+    "name" : "@eum/common",
+    "version": "3.0.0",
+    "main": "./nuxt.mjs",
+    "private": true,
+    "scripts": {},
+    "devDependencies": {
+      "@vitejs/plugin-vue": "^4.0.0"
+    }
+  }
+  
