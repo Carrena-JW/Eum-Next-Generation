@@ -21,7 +21,7 @@ public class CompanyRepository<T> : RepositoryBase, ICompanyRepository<T> where 
         await c.OpenAsync();
         
         var q = CreateQuerySet(QueryCommandType.Create, targetTable, payload);
-        return (await c.QueryAsync<int>(q, ExceptNullValueProperty(payload))).FirstOrDefault();
+        return (await c.QueryFirstOrDefaultAsync<int>(q, ExceptNullValueProperty(payload)));
 
     }
 
