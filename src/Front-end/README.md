@@ -14,3 +14,12 @@
   (board store, mail store, workflow store 가 아닌 article store, comment store, user store 등등 세분하게 구분함) 
 - 기존 데코레이터를 사용하여 구현 @component, @Watch 등등
 - Composition API 를 사용하여 구현부 단순화 + 재사용 증가
+
+
+
+### Version 정보 - 2022-12-19 기준
+
+## Nuxt3 - 3.0.0
+## pnpm - 7.18.2
+## turborepo - 1.6.3
+## vite - 4.0.2 (npm release 기준)
